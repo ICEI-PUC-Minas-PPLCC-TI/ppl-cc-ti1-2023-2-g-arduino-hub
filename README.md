@@ -5,8 +5,8 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 - André Luís Silva de Paula
-- Arnobio Lima Pitanga
-- Joao Paulo Vaz de Melo Gonçalves
+- Arnóbio Lima Pitanga
+- João Paulo Vaz de Melo Gonçalves
 - Rodrigo de Freitas Fornazier
 - Victor Soares Bergo de Aguiar
 
