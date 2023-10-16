@@ -7,7 +7,7 @@ Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diret
 Uma sugestão da estrutura de diretórios para o projeto é a seguinte:
 
 ```plaintext
-codigo/  (essa pasta aqui)
+src/
 │
 ├── index.html
 │
