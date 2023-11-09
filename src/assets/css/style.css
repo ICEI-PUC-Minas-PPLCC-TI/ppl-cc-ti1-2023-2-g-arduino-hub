@@ -94,9 +94,31 @@ nav ul li{
 }
 
 nav ul li:hover,
-nav ul li:last-child {
+nav ul li.login {
 	background: var(--principal-blue);
 	transition: .5s linear;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  min-width: 160px;
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: flex;
+	flex-direction: column;
+}
+
+.dropdown-content li {
+	padding: .3em;
+	background-color: var(--black);
+}
+
+.dropdown-content li a {
+	color: var(--white);
 }
 
 .hamb {
@@ -178,6 +200,7 @@ nav ul li:last-child {
 main {
 	width: 800px;
 	max-width: 100%;
+	min-height: 60vh;
 	margin: auto;
 	padding: 0 1em;
 }
@@ -186,6 +209,7 @@ main {
 footer {
 	display: grid;
 	grid-template-columns: 4fr 3fr;
+	min-height: 15vh;
 	margin-top: 3em;
 	padding: 1em 4em 3em;
 	background-color: var(--black);
@@ -195,7 +219,7 @@ footer {
 footer section {
 	display: flex;
 	width: 100%;
-	min-height: 15em;
+	min-height: 15%;
 	padding: 0 2em;
 	flex-direction: column;
 }

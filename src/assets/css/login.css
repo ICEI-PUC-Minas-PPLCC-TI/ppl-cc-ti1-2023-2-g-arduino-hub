@@ -1,0 +1,51 @@
+.login-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form .input-field {
+	width: 350px;
+	max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+
+form .input-field label {
+	font-size: 1.1em;
+	margin-top: 1em;
+}
+
+form .input-field input {
+	padding: 0.5em;
+	border: 1px solid var(--grey);
+	background-color: white;
+	border-radius: .5vmax;
+	margin-top: 0.5em;
+	font-size: 1.1em;
+}
+
+form button {
+	float: right;
+	padding: 1em;
+	border: none;
+	border-radius: .5vmax;
+	margin-top: 1.5em;
+	background-color: var(--principal-blue);
+	color: var(--white);
+	font-weight: bold;
+}
+
+form button:hover {
+	cursor: pointer;
+	background-color: var(--grey);
+}
+
+.login-container p {
+  margin-top: 3em;
+}
+
+.login-container p a {
+  font-weight: bold;
+  color: var(--principal-blue);
+}
