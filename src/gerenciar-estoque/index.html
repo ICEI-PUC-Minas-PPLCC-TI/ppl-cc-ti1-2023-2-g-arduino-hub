@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="estoque.css">
+  <link rel="stylesheet" href="modal.css">
+
+  <title>Gerenciar Estoque</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      Arduino HUB
+    </a>
+
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+    <!-- Menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="./pages/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="componet-list">
+      <h2>Estoque de Peças</h2>
+
+      <button id="add-component">+ Componete</button>
+
+      <ul id="component-list"></ul>
+
+    </section>
+
+    <section id="modal" class="modal-overlay">
+      <section class="modal-content">
+        <span id="close-modal"><i class="fas fa-times-circle"></i></span>
+        <h3 class="modal-title">PlaceHolder</h3>
+
+        <form>
+          <div class="input-field">
+            <label for="name">Nome</label>
+            <input id="name" type="text">
+          </div>
+
+          <div class="input-field">
+            <label for="qtd">Quantidade</label>
+            <input id="qtd" min="0" type="number">
+          </div>
+
+          <button></button>
+        </form>
+
+      </section>
+    </section>
+  </main>
+
+</body>
+<script src="index.js" defer></script>
+<script src="modal.js" defer></script>
+
+</html>
