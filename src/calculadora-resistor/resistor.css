@@ -1,0 +1,136 @@
+:root {
+  --white: white;
+  --resistor-black: #111;
+  --resistor-brown: #583030;
+  --resistor-red: red;
+  --resistor-orange: orange;
+  --resistor-yellow: yellow;
+  --resistor-green: green;
+  --resistor-blue: blue;
+  --resistor-violet: purple;
+  --resistor-gray: gray;
+  --resistor-white: white;
+  --resistor-gold: gold;
+  --resistor-silver: silver;
+}
+
+.resistorDisplay {
+	width: 250px;
+	height: 100px;
+  margin: auto;
+	border: 2px solid #000;
+	border-radius: 10px;
+	position: relative;
+	background-color: #efefef;
+}
+
+.band {
+	width: 20px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+#band1 {
+	left: 30px;
+}
+
+#band2 {
+	left: 80px;
+}
+
+#band3 {
+	left: 130px;
+}
+
+#band4 {
+	left: 190px;
+	width: 30px;
+}
+
+.black {
+  color: var(--white);
+  background-color: var(--resistor-black);
+}
+
+.brown {
+  color: var(--white);
+  background-color: var(--resistor-brown);
+}
+
+.red{
+  color: var(--white);
+  background-color: var(--resistor-red);
+}
+
+.orange{
+  color: var(--black);
+  background-color: var(--resistor-orange);
+}
+
+.yellow{
+  color: var(--black);
+  background-color: var(--resistor-yellow);
+}
+
+.green{
+  color: var(--white);
+  background-color: var(--resistor-green);
+}
+
+.blue{
+  color: var(--white);
+  background-color: var(--resistor-blue);
+}
+
+.violet{
+  color: var(--white);
+  background-color: var(--resistor-violet);
+}
+
+.gray{
+  color: var(--white);
+  background-color: var(--resistor-gray);
+}
+
+.white{
+  color: var(--black);
+  background-color: var(--resistor-white);
+}
+
+.silver {
+  color: var(--black);
+  background-color: var(--resistor-silver);
+}
+
+.gold {
+  color: var(--black);
+  background-color: var(--resistor-gold);
+}
+
+form select {
+  width: 150px;
+  height: 40px;
+  border: 2px solid var(--black);
+  border-radius: 1vmax;
+  text-align: center;
+}
+
+form {
+  margin: 20px 0;
+  max-width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.inputColor {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-bottom: 20px;
+}
