@@ -171,47 +171,49 @@
                 <h5>Histórias de Usuários</h5>
                 <p>Com base na análise das personas foram identificadas as seguintes histórias de usuários:</p>
 
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">EU COMO...<code>PERSONA</code></th>
-                      <th scope="col">QUERO/PRECISO...<code>FUNCIONALIDADE</code></th>
-                      <th scope="col">PARA...<code>MOTIVO/VALOR</code></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Estudante de Arduino</th>
-                      <td>Quero encontrar informações sobre Arduino de forma mais fácil e organizada</td>
-                      <td>Pois estou sobrecarregado com a quantidade de informações espalhadas pela internet</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Estudante de Arduino</th>
-                      <td>Quero encontrar informações direcionadas e orientações claras</td>
-                      <td>Porque sou inexperiente na área</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Estudante de Arduino</th>
-                      <td>Quero entender como funciona os componentes eletrônicos do Arduino</td>
-                      <td>Para aprofundar meu conhecimento na área de eletrônica do Arduino</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Estudante de Arduino</th>
-                      <td>Quero uma plataforma abrangente que agrega conteúdos de software e hardware do Arduino</td>
-                      <td>Pois sou autodidata e desejo realizar projetos completos</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Estudante de Arduino</th>
-                      <td>Desejo um fórum na plataforma</td>
-                      <td>Para compartilhar projetos e informações com outras pessoas</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Administrador</th>
-                      <td>Desejo gerenciar usuários e conteúdo</td>
-                      <td>Para manter a plataforma organizada e em funcionamento</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">EU COMO...<code>PERSONA</code></th>
+                        <th scope="col">QUERO/PRECISO...<code>FUNCIONALIDADE</code></th>
+                        <th scope="col">PARA...<code>MOTIVO/VALOR</code></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Estudante de Arduino</th>
+                        <td>Quero encontrar informações sobre Arduino de forma mais fácil e organizada</td>
+                        <td>Pois estou sobrecarregado com a quantidade de informações espalhadas pela internet</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Estudante de Arduino</th>
+                        <td>Quero encontrar informações direcionadas e orientações claras</td>
+                        <td>Porque sou inexperiente na área</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Estudante de Arduino</th>
+                        <td>Quero entender como funciona os componentes eletrônicos do Arduino</td>
+                        <td>Para aprofundar meu conhecimento na área de eletrônica do Arduino</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Estudante de Arduino</th>
+                        <td>Quero uma plataforma abrangente que agrega conteúdos de software e hardware do Arduino</td>
+                        <td>Pois sou autodidata e desejo realizar projetos completos</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Estudante de Arduino</th>
+                        <td>Desejo um fórum na plataforma</td>
+                        <td>Para compartilhar projetos e informações com outras pessoas</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Administrador</th>
+                        <td>Desejo gerenciar usuários e conteúdo</td>
+                        <td>Para manter a plataforma organizada e em funcionamento</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </section>
 
               <section>
@@ -219,82 +221,84 @@
                 <p>As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.</p>
 
                 <p><strong>Requisitos Funcionais</strong></p>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">ID</th>
-                      <th scope="col">Descrição do Requisito</th>
-                      <th scope="col">Prioridade</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">RF-01</th>
-                      <td>Permitir o cadastro/login de usuário.</td>
-                      <td>MÉDIA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-02</th>
-                      <td>Permitir o usuário gerenciar seu perfil.</td>
-                      <td>BAIXA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-03</th>
-                      <td>Disponibilizar informações detalhadas dos componentes do Arduino.</td>
-                      <td>ALTA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-04</th>
-                      <td>Permitir o usuário escolher o modelo de Arduino que desejar.</td>
-                      <td>MÉDIA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-05</th>
-                      <td>Permitir o usuário acessar e criar projetos.</td>
-                      <td>ALTA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-06</th>
-                      <td>Permitir o usuário filtrar projetos por categoria e dificuldade.</td>
-                      <td>MÉDIA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-07</th>
-                      <td>Permitir o usuário criar e gerenciar seus posts no fórum.</td>
-                      <td>ALTA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-08</th>
-                      <td>Permitir o usuário ordenar os posts por data e curtidas.</td>
-                      <td>ALTA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-09</th>
-                      <td>Permitir curtidas e comentários nos posts do fórum.</td>
-                      <td>MÉDIA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-10</th>
-                      <td>Disponibilizar tabela de resistor.</td>
-                      <td>ALTA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-11</th>
-                      <td>Disponibilizar calculadora de resistor.</td>
-                      <td>ALTA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-12</th>
-                      <td>Disponibilizar bibliotecas úteis para download.</td>
-                      <td>ALTA</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RF-13</th>
-                      <td>Permitir ao administrador gerenciar posts e projetos.</td>
-                      <td>BAIXA</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Descrição do Requisito</th>
+                        <th scope="col">Prioridade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">RF-01</th>
+                        <td>Permitir o cadastro/login de usuário.</td>
+                        <td>MÉDIA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-02</th>
+                        <td>Permitir o usuário gerenciar seu perfil.</td>
+                        <td>BAIXA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-03</th>
+                        <td>Disponibilizar informações detalhadas dos componentes do Arduino.</td>
+                        <td>ALTA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-04</th>
+                        <td>Permitir o usuário escolher o modelo de Arduino que desejar.</td>
+                        <td>MÉDIA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-05</th>
+                        <td>Permitir o usuário acessar e criar projetos.</td>
+                        <td>ALTA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-06</th>
+                        <td>Permitir o usuário filtrar projetos por categoria e dificuldade.</td>
+                        <td>MÉDIA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-07</th>
+                        <td>Permitir o usuário criar e gerenciar seus posts no fórum.</td>
+                        <td>ALTA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-08</th>
+                        <td>Permitir o usuário ordenar os posts por data e curtidas.</td>
+                        <td>ALTA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-09</th>
+                        <td>Permitir curtidas e comentários nos posts do fórum.</td>
+                        <td>MÉDIA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-10</th>
+                        <td>Disponibilizar tabela de resistor.</td>
+                        <td>ALTA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-11</th>
+                        <td>Disponibilizar calculadora de resistor.</td>
+                        <td>ALTA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-12</th>
+                        <td>Disponibilizar bibliotecas úteis para download.</td>
+                        <td>ALTA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-13</th>
+                        <td>Permitir ao administrador gerenciar posts e projetos.</td>
+                        <td>BAIXA</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
                 <p><strong>Requisitos Não-Funcionais</strong></p>
                 <table class="table">
@@ -344,13 +348,13 @@
                 <h5>User/Screen Flow e Protótipo interativo</h5>
                 <p>Artefatos relacionados com a interface e a interacão do usuário na solução proposta.</p>
                 <img class="img-fluid" src="assets/images/user-flow.jpg" alt="User-Flow">
-                
+
                 <p></p>
                 <h6> Protótipo interativo </h6>
                 <br><br>
-                <p>
-                 <iframe aling="center" width="600" height="528" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLLOcP9sdJavmf96mqgcXp1%2FArduinoHub%3Ftype%3Ddesign%26node-id%3D836-625%26t%3DabRWOOvEeR3X8rJI-1%26scaling%3Dscale-down-width%26page-id%3D773%3A135%26mode%3Ddesign&hide-ui=1" allowfullscreen></iframe>
-                </p>
+                <div class="embed-responsive embed-responsive-4by3">
+                  <iframe class="embed-responsive-item" aling="center" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLLOcP9sdJavmf96mqgcXp1%2FArduinoHub%3Ftype%3Ddesign%26node-id%3D836-625%26t%3DabRWOOvEeR3X8rJI-1%26scaling%3Dscale-down-width%26page-id%3D773%3A135%26mode%3Ddesign&hide-ui=1" allowfullscreen></iframe>
+                </div>
 
                 <p></p>
               </section>
@@ -369,7 +373,7 @@
                 <img class="img-fluid" src="assets/images/wireframe-exibicaodepost.png" alt="Exibiçao de Post">
                 <img class="img-fluid" src="assets/images/wireframe-login.png" alt="Login">
                 <img class="img-fluid" src="assets/images/wireframe-registrar.png" alt="Registro">
-                <img class="img-fluid" src="assets/images/wireframe-teladeperfil.png" alt="Tela de perfil"> 
+                <img class="img-fluid" src="assets/images/wireframe-teladeperfil.png" alt="Tela de perfil">
                 <p></p>
               </section>
 
@@ -388,42 +392,44 @@
               <h4 id="ti_ferramentas">Ferramentas</h4>
               <p>Relação de ferramentas empregadas pelo grupo durante o projeto.</p>
 
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Ambiente</th>
-                    <th scope="col">Plataforma</th>
-                    <th scope="col">Link de Acesso</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Processo de Design Thinking</td>
-                    <td>Miro</td>
-                    <td><a target="_blank" href="https://miro.com/app/board/uXjVMoAzxas=/">https://miro.com/app/board/uXjVMoAzxas=</a></td>
-                  </tr>
-                  <tr>
-                    <td>Repositório de código</td>
-                    <td>GitHub</td>
-                    <td><a target="_blank" href="https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20232-arduino-hub">https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20232-arduino-hub</a></td>
-                  </tr>
-                  <tr>
-                    <td>Hospedagem do site</td>
-                    <td>GitHub Pages</td>
-                    <td><a target="_blank" href="https://icei-puc-minas-pplcc-ti.github.io/ti-1-ppl-cc-m-20232-arduino-hub/">https://icei-puc-minas-pplcc-ti.github.io/ti-1-ppl-cc-m-20232-arduino-hub/</a></td>
-                  </tr>
-                  <tr>
-                    <td>Protótipo Interativo</td>
-                    <td>Figma</td>
-                    <td><a target="_blank" href="https://www.figma.com/proto/LLOcP9sdJavmf96mqgcXp1/ArduinoHub?page-id=773%3A135&type=design&node-id=836-625&viewport=3219%2C1827%2C0.15&t=cmrdnYi5H2SP4eFD-1&scaling=scale-down">https://www.figma.com/proto/LLOcP9sdJavmf96mqgcXp1/ArduinoHub</a></td>
-                  </tr>
-                  <tr>
-                    <td>Comunicação</td>
-                    <td>Discord e WhatsApp</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Ambiente</th>
+                      <th scope="col">Plataforma</th>
+                      <th scope="col">Link de Acesso</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Processo de Design Thinking</td>
+                      <td>Miro</td>
+                      <td><a target="_blank" href="https://miro.com/app/board/uXjVMoAzxas=/">https://miro.com/app/board/uXjVMoAzxas=</a></td>
+                    </tr>
+                    <tr>
+                      <td>Repositório de código</td>
+                      <td>GitHub</td>
+                      <td><a target="_blank" href="https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20232-arduino-hub">https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20232-arduino-hub</a></td>
+                    </tr>
+                    <tr>
+                      <td>Hospedagem do site</td>
+                      <td>GitHub Pages</td>
+                      <td><a target="_blank" href="https://icei-puc-minas-pplcc-ti.github.io/ti-1-ppl-cc-m-20232-arduino-hub/">https://icei-puc-minas-pplcc-ti.github.io/ti-1-ppl-cc-m-20232-arduino-hub/</a></td>
+                    </tr>
+                    <tr>
+                      <td>Protótipo Interativo</td>
+                      <td>Figma</td>
+                      <td><a target="_blank" href="https://www.figma.com/proto/LLOcP9sdJavmf96mqgcXp1/ArduinoHub?page-id=773%3A135&type=design&node-id=836-625&viewport=3219%2C1827%2C0.15&t=cmrdnYi5H2SP4eFD-1&scaling=scale-down">https://www.figma.com/proto/LLOcP9sdJavmf96mqgcXp1/ArduinoHub</a></td>
+                    </tr>
+                    <tr>
+                      <td>Comunicação</td>
+                      <td>Discord e WhatsApp</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
             <section id="ti_gestao_projeto">
