@@ -3,9 +3,9 @@ let usersList = [];
 
 window.addEventListener('load', loadUsers, false);
 
-if (window.location.pathname === '/login.html') {
+if (window.location.pathname.includes('/login.html')) {
   document.querySelector('form.login').addEventListener('submit', login, false);
-} else if (window.location.pathname === '/register.html') {
+} else if (window.location.pathname.includes('/register.html')) {
   document.querySelector('form.register').addEventListener('submit', register, false);
 }
 

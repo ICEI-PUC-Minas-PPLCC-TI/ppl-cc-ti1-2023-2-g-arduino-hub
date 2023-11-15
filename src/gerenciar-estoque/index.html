@@ -15,7 +15,7 @@
 
 <body>
   <header>
-    <a href="index.html" class="logo">
+    <a href="../index.html" class="logo">
       Arduino HUB
     </a>
 
@@ -26,7 +26,19 @@
     <!-- Menu -->
     <nav>
       <ul class="menu">
-        <li><a href="./pages/login.html">Login</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="../calculadora-resistor/">Ferramentas</a></li>
+        <li><a href="">Componetes</a></li>
+        <li><a href="#">Fórum</a></li>
+        <li class="login"><a href="../login.html">Login</a></li>
+        <li class="my-account dropdown-menu">
+          <a><i class="fas fa-user"></i></a>
+
+          <ul class="dropdown-content">
+            <li><a href="../profile.html">Minha Conta</a></li>
+            <li><a href="" id="logout">Sair</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
@@ -65,6 +77,7 @@
   </main>
 
 </body>
+<script src="../assets/js/index.js"></script>
 <script src="index.js" defer></script>
 <script src="modal.js" defer></script>
 

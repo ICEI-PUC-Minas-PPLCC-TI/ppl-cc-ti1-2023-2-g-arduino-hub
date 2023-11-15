@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
 
 :root {
   --principal-blue: #1372bf;
@@ -7,6 +8,8 @@
 	--light-grey: #cccccc;
 	--grey: #858585;
 	--black: #2C2C2C;
+	--blue: #202088;
+	--red: #882020;
 	--light-blue: #88FFFF;
 	--light-yellow: #FFFC5C;
 	--light-red: #FF5544;
@@ -34,13 +37,14 @@ h2 {
 	margin: 1em auto 0.5em;
 	font-size: 2em;
 	text-align: start;
+	max-width: 90%;
 }
 
 h3 {
 	width: 100%;
 	margin: 1em 0 .5em;
 	font-size: 1.4em;
-	color: var(--white);
+	color: var(--black);
 }
 
 a {
@@ -209,7 +213,7 @@ main {
 footer {
 	display: grid;
 	grid-template-columns: 4fr 3fr;
-	min-height: 15vh;
+	min-height: 10vh;
 	margin-top: 3em;
 	padding: 1em 4em 3em;
 	background-color: var(--black);
@@ -219,7 +223,7 @@ footer {
 footer section {
 	display: flex;
 	width: 100%;
-	min-height: 15%;
+	min-height: 15em;
 	padding: 0 2em;
 	flex-direction: column;
 }
@@ -251,3 +255,4 @@ footer section li a {
 		padding: 0;
 	}
 }
+

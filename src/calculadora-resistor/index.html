@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="resistor.css">
 
@@ -11,7 +12,7 @@
 </head>
 <body>
   <header>
-    <a href="index.html" class="logo"> Arduino HUB </a>
+    <a href="../index.html" class="logo"> Arduino HUB </a>
 
     <!-- Hamburger icon -->
     <input class="side-menu" type="checkbox" id="side-menu" />
@@ -21,9 +22,18 @@
     <nav>
       <ul class="menu">
         <li><a href="#">Projetos</a></li>
-        <li><a href="#">Ferramentas</a></li>
+        <li><a href="">Ferramentas</a></li>
+        <li><a href="../gerenciar-estoque/">Componetes</a></li>
         <li><a href="#">Fórum</a></li>
-        <li><a href="#">Login</a></li>
+        <li class="login"><a href="../login.html">Login</a></li>
+        <li class="my-account dropdown-menu">
+          <a><i class="fas fa-user"></i></a>
+
+          <ul class="dropdown-content">
+            <li><a href="../profile.html">Minha Conta</a></li>
+            <li><a href="" id="logout">Sair</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
@@ -100,7 +110,7 @@
       <p>Resistência: <span id="resistorValue"></span></p>
     </section>
   </main>
-
-  <script src="resistor.js"></script>
 </body>
+<script src="../assets/js/index.js"></script>
+<script src="resistor.js"></script>
 </html>
