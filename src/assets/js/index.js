@@ -23,5 +23,6 @@ function logout(event) {
   event.preventDefault();
 
   sessionStorage.removeItem('userId');
-  window.location = 'login.html';
+  
+  window.location.reload();
 }
