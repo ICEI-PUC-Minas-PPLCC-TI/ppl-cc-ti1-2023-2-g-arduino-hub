@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="resistor.css">
+
+  <title>Calculadora de Resistor - Arduino HUB</title>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"> Arduino HUB </a>
+
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+    <!-- Menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Ferramentas</a></li>
+        <li><a href="#">Fórum</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Calculadora de resistor</h2>
+
+      <div class="resistorDisplay">
+        <div id="band1" class="band"></div>
+        <div id="band2" class="band"></div>
+        <div id="band3" class="band"></div>
+        <div id="band4" class="band"></div>
+      </div>
+
+      <form name="colorSelect">
+        <div class="inputColor">
+          <label for="band1">1ª Faixa</label>
+          <select class="band1" name="band1">
+            <option value="0" class="black" selected>Preto (0)</option>
+            <option value="1" class="brown">Marrom (1)</option>
+            <option value="2" class="red">Vermelho (2)</option>
+            <option value="3" class="orange">Laranja (3)</option>
+            <option value="4" class="yellow">Amarelo (4)</option>
+            <option value="5" class="green">Verde (5)</option>
+            <option value="6" class="blue">Azul (6)</option>
+            <option value="7" class="violet">Violeta (7)</option>
+            <option value="8" class="gray">Cinza (8)</option>
+            <option value="9" class="white">Branco (9)</option>
+          </select>
+        </div>
+
+        <div class="inputColor">
+          <label for="band2">2ª Faixa</label>
+          <select class="band2" name="band2">
+            <option value="0" class="black" selected>Preto (0)</option>
+            <option value="1" class="brown">Marrom (1)</option>
+            <option value="2" class="red">Vermelho (2)</option>
+            <option value="3" class="orange">Laranja (3)</option>
+            <option value="4" class="yellow">Amarelo (4)</option>
+            <option value="5" class="green">Verde (5)</option>
+            <option value="6" class="blue">Azul (6)</option>
+            <option value="7" class="violet">Violeta (7)</option>
+            <option value="8" class="gray">Cinza (8)</option>
+            <option value="9" class="white">Branco (9)</option>
+          </select>
+        </div>
+
+        <div class="inputColor">
+          <label for="band3">3ª Faixa</label>
+          <select class="band3" name="band3">
+            <option value="0.01" class="silver" selected>Prata (0.01)</option>
+            <option value="0.1" class="gold">Ouro (0.1)</option>
+            <option value="1" class="black">Preto (1)</option>
+            <option value="10" class="brown">Marrom (10)</option>
+            <option value="100" class="red">Vermelho (100)</option>
+            <option value="1000" class="orange">Laranja (1k)</option>
+            <option value="10000" class="yellow">Amarelo (10k)</option>
+            <option value="100000" class="green">Verde (100k)</option>
+            <option value="1000000" class="blue">Azul (1M)</option>
+            <option value="10000000" class="violet">Violeta (10M)</option>
+          </select>
+        </div>
+
+        <div class="inputColor">
+          <label for="band4">4ª Faixa</label>
+          <select class="band4" name="band4">
+            <option value="10%" class="silver" selected>Prata (&plusmn; 10%)</option>
+            <option value="5%" class="gold">Ouro (&plusmn; 5%)</option>
+          </select>
+        </div>
+      </form>
+
+      <p>Resistência: <span id="resistorValue"></span></p>
+    </section>
+  </main>
+
+  <script src="resistor.js"></script>
+</body>
+</html>
