@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <link rel="stylesheet" href="src/assets/css/style.css">
-  <link rel="stylesheet" href="src/assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
 
   <title>Arduino HUB</title>
 </head>
@@ -24,12 +24,12 @@
         <li><a href="#">Projetos</a></li>
         <li><a href="#">Ferramentas</a></li>
         <li><a href="#">Fórum</a></li>
-        <li class="login"><a href="login.html">Login</a></li>
+        <li class="login"><a href="">Login</a></li>
         <li class="my-account dropdown-menu">
           <a><i class="fas fa-user"></i></a>
 
           <ul class="dropdown-content">
-            <li><a href="profile.html">Minha Conta</a></li>
+            <li><a href="#">Minha Conta</a></li>
             <li><a href="" id="logout">Sair</a></li>
           </ul>
         </li>
@@ -38,39 +38,24 @@
   </header>
 
   <main>
-    <h2>Criar Conta</h2>
+    <h2>Login</h2>
 
     <div class="login-container">
-      <form class="register">
-        <div class="input-field">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name">
-        </div>
-
+      <form class="login">
         <div class="input-field">
           <label for="username">Usuário</label>
-          <input min="3" pattern="[a-z0-9_-]*" type="text" name="username" id="username">
-        </div>
-
-        <div class="input-field">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email">
+          <input type="text" name="username" id="username">
         </div>
 
         <div class="input-field">
           <label for="password">Senha</label>
-          <input min="6" type="password" name="password" id="password">
+          <input type="password" name="password" id="password">
         </div>
 
-        <div class="input-field">
-          <label for="password-confirm">Confirma a senha</label>
-          <input type="password" name="password-confirm" id="password-confirm">
-        </div>
-
-        <button id="register">Criar</button>
+        <button id="login">Login</button>
       </form>
 
-      <p>Já tem uma conta? <a href="login.html">Entre aqui</a></p>
+      <p>Ainda não tem uma conta? <a href="register.html">Criar conta</a></p>
     </div>
 
   </main>
@@ -90,6 +75,6 @@
     </section>
   </footer>
 </body>
-<script src="src/assets/js/login.js"></script>
-<script src="src/assets/js/index.js"></script>
+<script src="assets/js/login.js"></script>
+<script src="assets/js/index.js"></script>
 </html>
