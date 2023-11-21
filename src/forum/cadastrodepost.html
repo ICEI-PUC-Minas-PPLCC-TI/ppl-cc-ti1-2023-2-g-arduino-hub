@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <title>Cadastro de comentario</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <a href="index.html" class="logo"> Arduino HUB </a>
+
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <!-- Menu -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="index.html">Fórum</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+              <div>
+                <h2> Criar Post </h2>
+              </div>
+            </div>
+        </section>
+
+        <article>
+            <form id="cadastro_de_post">
+                <div>
+                    <h4> Titulo </h4>
+                    <input type="text" id="titulo">
+
+                    <h4> Categoria </h4>
+                    <input type="text" id="categoria">
+
+                    <h4> Conteúdo </h4>
+                    <input class="conteudo" type="text" id="conteudo">
+
+                    <button type="button" id="publicar">Publicar</button>
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <section class="about">
+            <h3>Sobre</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihil quibusdam fugit
+                sapiente
+                iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisci officiis consequuntur optio
+                beatae
+                dolores corrupti.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihil quibusdam fugit
+                sapiente
+                iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisci officiis consequuntur optio
+                beatae
+                dolores corrupti.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihil quibusdam fugit
+                sapiente
+                iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisci officiis consequuntur optio
+                beatae
+                dolores corrupti.</p>
+        </section>
+
+        <section>
+            <h3>Links</h3>
+            <li>Documentação do Projeto: <a href="docs/index.html">TI DOCS</a></li>
+        </section>
+    </footer>
+</body>
+
+
+<script src="assets/js/app.js"> </script>
+<script>
+    function init() {
+        // variavel para pegar do formulario
+        cadastro_de_post = document.getElementById("cadastro_de_post")
+
+        // Recebe a informaçao de quanto o botao e apertado
+        btn_publicar = document.getElementById('publicar')
+        btn_publicar.addEventListener('click', function() {
+            if(!cadastro_de_post.checkValidity()) {
+                displayMessage("Preencha o formulario corretamente");
+                return;
+            }
+
+            // Pega os conteudos do formulario
+            let campoTitulo = document.getElementById('titulo').value;
+            let campoCategoria = document.getElementById('categoria').value;
+            let campoConteudo = document.getElementById('conteudo').value;
+
+            //cria um objeto para colocar dentro json
+            let forum = {   titulo: campoTitulo,
+                categoria: campoCategoria,
+                conteudo: campoConteudo
+            };
+            
+            //colocar no Json
+            createContato(forum);
+
+            //limpa formulario
+            cadastro_de_post.reset()
+        });
+    }
+
+    
+</script>
+
+</html>

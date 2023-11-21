@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style4.css">
+    <script src="assets/js/app.js" defer></script>
+    <title>Atualizar Post</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <a href="index.html" class="logo"> Arduino HUB </a>
+
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <!-- Menu -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="index.html">Fórum</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+              <div>
+                <h2> Atualizar Post </h2>
+              </div>
+            </div>
+        </section>
+
+        <article>
+            <form id="Update_de_post">
+                <div>
+                    <h4> Id </h4>
+                    <input type="text" id="id" placeholder="Selecione o ID que voce deseja atualizar">
+
+                    <h4> Titulo </h4>
+                    <input type="text" id="titulo">
+
+                    <h4> Categoria </h4>
+                    <input type="text" id="categoria">
+
+                    <h4> Conteúdo </h4>
+                    <input class="conteudo" type="text" id="conteudo">
+
+                    <button type="button" id="atualizar">Editar</button>
+                </div>
+            </form>
+        </article>
+
+        <article>
+            <section id="posts"></section>
+        </article>
+
+    </main>
+
+    <footer>
+        <section class="about">
+            <h3>Sobre</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihil quibusdam fugit
+                sapiente
+                iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisci officiis consequuntur optio
+                beatae
+                dolores corrupti.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihil quibusdam fugit
+                sapiente
+                iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisci officiis consequuntur optio
+                beatae
+                dolores corrupti.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihil quibusdam fugit
+                sapiente
+                iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisci officiis consequuntur optio
+                beatae
+                dolores corrupti.</p>
+        </section>
+
+        <section>
+            <h3>Links</h3>
+            <li>Documentação do Projeto: <a href="docs/index.html">TI DOCS</a></li>
+        </section>
+    </footer>
+</body>
+
+</html>
+
+<script src="assets/js/app.js"></script>
+<script>
+
+btnAtualziar = document.getElementById('atualizar');
+btnAtualziar.addEventListener('click', Updateposts, false)
+
+function Updateposts(){
+	let Campoid = document.getElementById('id').value;
+	let CampoTitulo = document.getElementById('titulo').value;
+	let CampoCategoria = document.getElementById('categoria').value;
+	let CampoConteudo = document.getElementById('conteudo').value;
+
+	let postAtualizar = {
+		titulo : CampoTitulo,
+		categoria : CampoCategoria,
+		conteudo : CampoConteudo,
+	}
+
+	fetch(`${apiUrl}/${Campoid}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postAtualizar),
+    })
+
+	.then(response => response.json())
+	.then(data => {
+		displayMessage("Contato alterado com sucesso");
+		if (refreshFunction)
+			refreshFunction();
+	})
+	.catch(error => {
+		console.error('Erro ao atualizar contato via API JSONServer:', error);
+		displayMessage("Erro ao atualizar contato");
+	});
+
+    readPosts();
+}
+
+</script>
