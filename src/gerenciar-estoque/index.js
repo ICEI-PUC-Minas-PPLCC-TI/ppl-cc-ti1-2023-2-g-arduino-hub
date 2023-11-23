@@ -1,11 +1,22 @@
 const apiURL = 'https://jsonserver--andreeluis.repl.co'
+let userId;
 let componentsList;
 let id;
 
 const form = document.querySelector('#modal form');
 
-window.addEventListener('load', showComponents, false);
-document.querySelector('#add-component').addEventListener('click', addComponent, false);
+
+
+if (isLogged()) {
+  userId = JSON.parse(sessionStorage.getItem('user')).id;
+  window.addEventListener('load', showComponents, false);
+  document.querySelector('#add-component').addEventListener('click', addComponent, false);
+}
+else {
+  alert('Você precisa estar conectado para acessar essa página!');
+  window.location.href = '../login.html';
+}
+
 
 // CREATE
 function addComponent() {
@@ -20,17 +31,18 @@ async function handleAddSubmit(event) {
   event.preventDefault();
 
   const newComponent = {
+    id: generateUUID(8),
     name: document.querySelector('#modal form #name').value,
     qtd: Number(document.querySelector('#modal form #qtd').value)
   };
 
   try {
-    const response = await fetch(`${apiURL}/componentes`, {
-      method: 'POST',
+    const response = await fetch(`${apiURL}/users/${userId}`, {
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(newComponent),
+      body: JSON.stringify({ components: [...componentsList, newComponent] })
     });
 
     if (!response.ok) {
@@ -46,7 +58,7 @@ async function handleAddSubmit(event) {
 
 // READ
 async function loadComponents() {
-  try { componentsList = await (await fetch(`${apiURL}/componentes`)).json() }
+  try { componentsList = (await (await fetch(`${apiURL}/users/${userId}`)).json()).components }
   catch (error) { console.error('Falha ao carregar componentes:', error)}
 }
 
@@ -78,6 +90,7 @@ async function showComponents() {
   }
 }
 
+
 // UPDATE
 function editComponent() {
   id = this.value;
@@ -94,17 +107,24 @@ async function handleEditSubmit(event) {
   event.preventDefault();
 
   const updatedComponent = {
+    id: id,
     name: document.querySelector('#modal form #name').value,
     qtd: Number(document.querySelector('#modal form #qtd').value)
   };
 
   try {
-    const response = await fetch(`${apiURL}/componentes/${id}`, {
-      method: 'PUT',
+    console.log(componentsList);
+
+    componentsList = componentsList.map(component => component.id == id ? updatedComponent : component);
+
+    console.log(componentsList);
+
+    const response = await fetch(`${apiURL}/users/${userId}`, {
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(updatedComponent),
+      body: JSON.stringify({ components: componentsList })
     });
 
     if (!response.ok) {
@@ -116,6 +136,7 @@ async function handleEditSubmit(event) {
   } catch (error) { console.error('Falha ao atualizar o componente:', error); }
 }
 
+
 // DELETE
 async function deleteComponent() {
   const id = this.value;
@@ -124,8 +145,14 @@ async function deleteComponent() {
   const confirmDelete = window.confirm(`Você realmente quer excluir ${component.name}?`);
   if (confirmDelete) {
     try {
-      const response = await fetch(`${apiURL}/componentes/${id}`, {
-        method: 'DELETE',
+      componentsList = componentsList.filter(component => component.id != id);
+
+      const response = await fetch(`${apiURL}/users/${userId}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ components: componentsList })
       });
 
       if (!response.ok) {

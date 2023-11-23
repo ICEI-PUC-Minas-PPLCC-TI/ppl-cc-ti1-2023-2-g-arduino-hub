@@ -26,7 +26,7 @@ function login(event) {
     let userFound = usersList.find(user => user.username === username && user.password === password);
 
     if (userFound) {
-      sessionStorage.setItem('userId', JSON.stringify(userFound.id));
+      sessionStorage.setItem('user', JSON.stringify({ "id":userFound.id, "name":userFound.name }));
       window.location = 'index.html';
     }
     else {
@@ -84,17 +84,9 @@ function register(event) {
     })
     .then(response => response.json())
     .then(data => {
-      sessionStorage.setItem('userId', JSON.stringify(data.id));
+      sessionStorage.setItem('user', JSON.stringify({ "id":data.id, "name":data.name }));
       window.location = 'index.html';
     })
   }
   catch (error) { console.error('Falha ao cadastrar usuário:', error) }
-}
-
-function generateUUID() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random() * 16 | 0,
-      v = c === 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
 }
