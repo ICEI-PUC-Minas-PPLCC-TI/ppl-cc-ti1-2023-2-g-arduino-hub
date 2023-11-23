@@ -256,3 +256,41 @@ footer section li a {
 	}
 }
 
+/* OTHERS */
+
+form .input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+form .input-field label {
+	font-size: 1.1em;
+	margin-top: 1em;
+}
+
+form .input-field input,
+form .input-field textarea {
+	max-width: 100%;
+	min-width: 100%;
+	margin-top: 0.5em;
+	padding: 0.5em;
+	border: 1px solid var(--grey);
+	border-radius: .5vmax;
+	font-size: 1.3em;
+}
+
+form button {
+	width: 100%;
+	padding: 1em;
+	border: none;
+	border-radius: .5vmax;
+	margin-top: 1.5em;
+	background-color: var(--principal-blue);
+	color: var(--white);
+	font-weight: bold;
+}
+
+form button:hover {
+	cursor: pointer;
+	background-color: var(--grey);
+}
