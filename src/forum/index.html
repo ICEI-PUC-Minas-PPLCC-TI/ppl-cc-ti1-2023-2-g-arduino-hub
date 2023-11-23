@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fórum - Arduino HUB</title>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/forum.css">
 </head>
 
 <body>
@@ -25,30 +27,33 @@
         <li><a href="../calculadora-resistor/">Ferramentas</a></li>
         <li><a href="../gerenciar-estoque/">Componetes</a></li>
         <li><a href="">Fórum</a></li>
-        <li><a href="../login.html">Login</a></li>
+        <li class="login"><a href="../login.html">Login</a></li>
+        <li class="my-account dropdown-menu">
+          <a><i class="fas fa-user"></i></a>
+
+          <ul class="dropdown-content">
+            <li><a href="../profile.html">Minha Conta</a></li>
+            <li><a href="" id="logout">Sair</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <h2>Fórum</h2>
+
+    <!-- <button id="add-post">+ Post</button> -->
+
     <section>
-      <h2>Fórum</h2>
-
-      <div>
-        <a href="cadastrodepost.html"> <button id="btn_post"> + Criar Post </button> </a>
-        <a href="deletepost.html"> <button id="btn_post"> - Deletar Post </button> </a>
-        <a href="updatepost.html"> <button id="btn_post">  Atualizar Post </button> </a>
-      </div>
-
+      <a href="cadastrodepost.html"> <button id="btn_post">+ Criar Post</button> </a>
+      <a href="deletepost.html"> <button id="btn_post">- Deletar Post</button> </a>
+      <a href="updatepost.html"> <button id="btn_post">Atualizar Post</button> </a>
     </section>
 
     <br>
 
-    <div>
-      <div class="foto"> </div>
-
-      <div id="posts"> <div>
-    </div>
+    <section id="posts"></section>
 
   </main>
 
@@ -56,8 +61,7 @@
     <section class="about">
       <h3>Sobre</h3>
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihi quibusdam fugit sapiente iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisc officiis consequuntur optio beatae dolores corrupti.
-      </p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veniam nihi quibusdam fugit sapiente iusto natus voluptas obcaecati dolor amet numquam nemo nostrum, adipisc officiis consequuntur optio beatae dolores corrupti.</p>
     </section>
 
     <section>
@@ -66,5 +70,6 @@
     </section>
   </footer>
 </body>
-<script src="assets/js/app.js"></script>
+<script src="../assets/js/index.js"></script>
+<script src="assets/js/index.js"></script>
 </html>
