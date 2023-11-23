@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórum - Arduino HUB</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Tela de cadastro</title>
-  <script src="assets/js/app.js" defer></script>
 </head>
 
 <body>
   <header>
-    <a href="#" class="logo"> Arduino HUB </a>
+    <a href="../index.html" class="logo"> Arduino HUB </a>
 
     <!-- Hamburger icon -->
     <input class="side-menu" type="checkbox" id="side-menu" />
@@ -21,31 +22,24 @@
     <nav>
       <ul class="menu">
         <li><a href="#">Projetos</a></li>
-        <li><a href="#">Ferramentas</a></li>
-        <li><a href="index.html">Fórum</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="../calculadora-resistor/">Ferramentas</a></li>
+        <li><a href="../gerenciar-estoque/">Componetes</a></li>
+        <li><a href="">Fórum</a></li>
+        <li><a href="../login.html">Login</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section>
-      
-      <div>
-        <h2>Fórum</h2>
-      </div>
+      <h2>Fórum</h2>
 
       <div>
         <a href="cadastrodepost.html"> <button id="btn_post"> + Criar Post </button> </a>
-      </div>
-
-      <div>
         <a href="deletepost.html"> <button id="btn_post"> - Deletar Post </button> </a>
-      </div>
-
-      <div>
         <a href="updatepost.html"> <button id="btn_post">  Atualizar Post </button> </a>
       </div>
+
     </section>
 
     <br>
@@ -72,9 +66,5 @@
     </section>
   </footer>
 </body>
-
-<script src="assets/js/app.js">
-  
-</script>
-
+<script src="assets/js/app.js"></script>
 </html>

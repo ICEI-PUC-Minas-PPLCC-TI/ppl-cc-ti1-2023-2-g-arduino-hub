@@ -39,17 +39,17 @@ function readPosts() {
 				textoHTML +=
 				`
 				<article>
-					<h4 id="titulo">${post.titulo} 
+					<h4 id="titulo">${post.titulo}
 
-					<span id="categoria">${post.categoria} 
-						<h4 class="quantidade"> ${post.curtida} 
-						</h4> <img class="foto" id="curtida" src="assets/img/gostar.png" 
-						alt="Curtida" width="35px" height="35px" onclick="ContarCurtida(${post.id})"> 
+					<span id="categoria">${post.categoria}
+						<h4 class="quantidade"> ${post.curtida}
+						</h4> <img class="foto" id="curtida" src="assets/img/gostar.png"
+						alt="Curtida" width="35px" height="35px" onclick="ContarCurtida(${post.id})">
 					</span>
-					
+
 					</h4>
 
-					<a href="DetalhesForum.html?id=${post.id}">
+					<a href="post.html?id=${post.id}">
 					<p id="descricao">${post.conteudo}</p>
 					<p id="id2"> id = ${post.id}</p>
 					</a>
@@ -101,7 +101,7 @@ function atualizarCurtida(titulo, categoria, conteudo, somacurtida,Campoid){
 
 function deletePosts(){
 	let id = document.getElementById('id').value;
-	
+
 	fetch(`${apiUrl}/${id}`, {
 		method: 'DELETE',
 	})

@@ -1,0 +1,56 @@
+section.info {
+  margin: 2em 0 1em;
+}
+
+h2.titulo {
+  display: inline-block;
+  margin: 0 1em 0 0;
+  vertical-align: middle;
+}
+
+p.categoria {
+  display: inline-block;
+  padding: .3em .6em;
+  background-color: var(--light-grey);
+  border-radius: .5vmax;
+}
+
+.autor {
+  font-weight: bold;
+}
+
+section.conteudo {
+  margin: 1em;
+}
+
+.secao-comentarios {
+  padding: 1em 3em;
+}
+
+#comentar input{
+  width: 60%;
+  padding: .6em;
+  border: 1px solid #333;
+  border-radius: .5vmax;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+#comentar button {
+ 	padding: 1em;
+	border: none;
+	border-radius: .5vmax;
+	margin-top: 1.5em;
+	background-color: var(--principal-blue);
+	color: var(--white);
+	font-weight: bold;
+}
+
+#comentar button:hover {
+  cursor: pointer;
+}
+
+section.comentarios {
+  margin: 1em 0;
+  
+}
