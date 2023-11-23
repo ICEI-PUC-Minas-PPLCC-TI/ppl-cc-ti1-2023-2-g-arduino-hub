@@ -15,14 +15,14 @@ async function showPost() {
   try {
     await loadPost();
 
-    const comentariosHTML = post.comentarios.map(({ usuario, comentario }) => `
-      <li>${usuario} - ${comentario}</li>
+    const comentariosHTML = post.comentarios.map(({ id, usuario, autor, comentario }) => `
+      <li id="${id}-${usuario.slice(0, 8)}">${autor} - ${comentario}</li>
     `).join('');
 
 		document.querySelector('.titulo').innerHTML = post.titulo;
 		document.querySelector('.categoria').innerHTML = post.categoria;
 		document.querySelector('.qtde-curtidas').innerHTML = post.curtidas;
-		document.querySelector('.autor').innerHTML = post.usuario;
+		document.querySelector('.autor').innerHTML = post.autor;
 
 
 		document.querySelector('.conteudo').innerHTML = `<p>${post.conteudo}</p>`;
@@ -38,7 +38,12 @@ async function addComentario(event) {
 
   await loadPost();
 
-  const novoComentario = document.querySelector('#comentario').value;
+  const novoComentario = {
+    id: generateUUID(8),
+    autor: JSON.parse(sessionStorage.getItem('user')).name,
+    usuario: JSON.parse(sessionStorage.getItem('user')).id,
+    comentario: document.querySelector('#comentario').value,
+  };
 
   fetch(`${apiUrl}/posts/${id}`, {
     method: 'PATCH',
@@ -46,7 +51,7 @@ async function addComentario(event) {
       'Content-Type': 'application/json',
     },
     //body: JSON.stringify({ novoComentario }),
-    body: JSON.stringify({ comentarios: [...post.comentarios, { usuario: 'aaaTeste', comentario: novoComentario }] }),
+    body: JSON.stringify({ comentarios: [...post.comentarios, novoComentario] }),
   })
     .then(() => showPost())
     .catch(error => {

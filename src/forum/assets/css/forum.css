@@ -7,7 +7,7 @@ main article{
 }
 
 button#add-post {
-  float: right;
+	float: right;
 	padding: 1em;
 	border: none;
 	border-radius: .5vmax;
@@ -21,6 +21,9 @@ button#add-post:hover {
  	cursor: pointer;
 }
 
+#posts {
+	display: inline-block;
+}
 
 #posts a {
 	color: inherit;
