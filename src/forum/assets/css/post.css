@@ -15,6 +15,19 @@ p.categoria {
   border-radius: .5vmax;
 }
 
+button#curtir {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: .3em .6em;
+  border-radius: .5vmax;
+  border: none;
+  margin-left: 2em;
+}
+
+button#curtir:hover {
+  cursor: pointer;
+}
+
 .autor {
   font-weight: bold;
 }
@@ -52,5 +65,5 @@ section.conteudo {
 
 section.comentarios {
   margin: 1em 0;
-  
+
 }

@@ -1,32 +1,23 @@
-const apiUrl = 'https://jsonserver.joao-paulopa392.repl.co/forum';
+const apiUrl = 'https://jsonserver.joao-paulopa392.repl.co/posts';
+let postsList;
 
 window.addEventListener('load', readPosts, false)
 
 btnExcluir = document.getElementById('excluir');
 btnExcluir.addEventListener('click', deletePosts, false)
 
-function displayMessage(mensagem) {
-	msg = document.getElementById('msg');
-	msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
+
+async function loadPosts() {
+	try { postsList = await (await fetch(`${apiUrl}/posts`)).json() }
+	catch (error) { console.error('Falha ao carregar posts:', error) }
 }
 
-function createContato(forum) {
-	fetch(apiUrl, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(forum),
-	})
-		.then(response => response.json())
-		.then(data => {
-			displayMessage("Contato inserido com sucesso");
-		})
-		.catch(error => {
-			console.error('Erro ao inserir contato via API JSONServer:', error);
-			displayMessage("Erro ao inserir contato");
-		});
-}
+
+
+
+
+
+
 
 function readPosts() {
 	fetch(apiUrl)
@@ -36,18 +27,17 @@ function readPosts() {
 			for (i=0; i < db.length; i++) {
 				let post = db[i]
 
-				textoHTML +=
-				`
+				textoHTML += `
 				<article>
-					<h4 id="titulo">${post.titulo}
+					<h3 id="titulo">${post.titulo}</h3>
 
-					<span id="categoria">${post.categoria}
-						<h4 class="quantidade"> ${post.curtida}
+					<p class="categoria">${post.categoria}</p>
+
+					<p id="categoria">
+						<h4 class="quantidade"> ${post.curtidas}
 						</h4> <img class="foto" id="curtida" src="assets/img/gostar.png"
 						alt="Curtida" width="35px" height="35px" onclick="ContarCurtida(${post.id})">
 					</span>
-
-					</h4>
 
 					<a href="post.html?id=${post.id}">
 					<p id="descricao">${post.conteudo}</p>
