@@ -1,48 +1,78 @@
-const apiUrl = 'https://jsonserver.joao-paulopa392.repl.co';
+const apiURL = 'https://jsonserver.joao-paulopa392.repl.co';
 let postsList;
 
-window.addEventListener('load', showPosts, false)
+const form = document.querySelector('#modal form');
 
-document.querySelector('#modal form').addEventListener('submit', addPost, false);
+window.addEventListener('load', showPosts, false);
+document.querySelector('#add-post').addEventListener('click', addPost, false);
 
 
 // READ
 async function loadPosts() {
-	try { postsList = await (await fetch(`${apiUrl}/posts`)).json() }
+	try { postsList = await (await fetch(`${apiURL}/posts`)).json() }
 	catch (error) { console.error('Falha ao carregar posts:', error) }
+}
+
+function generateHTML(post) {
+  const { id, titulo, categoria, comentarios, curtidas, conteudo, usuario } = post;
+  const isAuthor = usuario === JSON.parse(sessionStorage.getItem('user')).id;
+
+  return `
+    <article ${isAuthor ? `class="autor"` : ''}>
+      <a href="post.html?id=${id}">
+        <h3 class="titulo">${titulo}</h3>
+      </a>
+      <p class="categoria">${categoria}</p>
+      <div class="engajamento">
+        <span><i class="far fa-comment-alt"></i> ${comentarios.length}</span>
+        <span><i class="far fa-thumbs-up"></i> ${curtidas}</span>
+        ${isAuthor ?
+          `<span>
+            <button value="${id}" class="edit"><i class="fas fa-edit"></i></button>
+            <button value="${id}" class="delete"><i class="fas fa-trash-alt"></i></button>
+          </span>` :
+          ''}
+      </div>
+      <p id="conteudo">${conteudo}</p>
+    </article>`;
 }
 
 async function showPosts() {
   try {
     await loadPosts();
 
-    const textoHTML = postsList.map(post => `
-    <article>
-      <a href="post.html?id=${post.id}">
-        <h3 class="titulo">${post.titulo}</h3>
-        <p class="categoria">${post.categoria}</p>
-
-        <div class="engajamento">
-          <span><i class="far fa-comment-alt"></i> ${post.comentarios.length}</span>
-          <span><i class="far fa-thumbs-up"></i> ${post.curtidas}</span>
-
-        </div>
-
-        <p id="conteudo">${post.conteudo}</p>
-      </a>
-    </article>
-    `).join('');
+    const textoHTML = postsList.map(generateHTML).join('');
 
     document.querySelector("#posts").innerHTML = textoHTML;
+
+    // Event listeners
+    document.querySelectorAll('.edit').forEach(button => {
+      button.addEventListener('click', editPost, false);
+    });
+    document.querySelectorAll('.delete').forEach(button => {
+      button.addEventListener('click', deletePost, false);
+    });
   }
   catch (error) {
     console.error('Falha ao exibir os posts:', error);
   }
 }
 
-
 // CREATE
-async function addPost(event) {
+function addPost() {
+  if (isLogged()) {
+    openAddModal();
+
+    form.removeEventListener('submit', handleEditSubmit, false);
+    form.removeEventListener('submit', handleAddSubmit, false);
+    form.addEventListener('submit', handleAddSubmit, false);
+  } else {
+    alert('Você precisa estar conectado para criar um novo post!');
+    window.location.href = '../login.html';
+  }
+}
+
+async function handleAddSubmit(event) {
   event.preventDefault();
 
   const newPost = {
@@ -58,7 +88,7 @@ async function addPost(event) {
   };
 
   try {
-    const response = await fetch(`${apiUrl}/posts`, {
+    const response = await fetch(`${apiURL}/posts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -74,4 +104,75 @@ async function addPost(event) {
     closeModal();
 
   } catch (error) { console.error('Falha ao adicionar o post:', error); }
+}
+
+// UPDATE
+function editPost() {
+  id = this.value;
+  const post = postsList.find(post => post.id == id);
+
+  openEditModal(post);
+
+  form.removeEventListener('submit', handleAddSubmit, false);
+  form.removeEventListener('submit', handleEditSubmit, false);
+  form.addEventListener('submit', handleEditSubmit, false);
+}
+
+async function handleEditSubmit(event) {
+  event.preventDefault();
+
+  const form = document.querySelector('#modal form');
+  const updatedPost = {
+    titulo: form.querySelector('#title').value,
+    categoria: form.querySelector('#category').value,
+    conteudo: form.querySelector('#content').value
+  };
+
+  try {
+    const response = await fetch(`${apiURL}/posts/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedPost)
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    await showPosts();
+    closeModal();
+  } catch (error) {
+    console.error('Falha ao atualizar o componente:', error);
+  }
+}
+
+
+
+// DELETE
+async function deletePost() {
+  const id = this.value;
+  const post = postsList.find(post => post.id == id);
+
+  const confirmDelete = window.confirm(`Você realmente quer excluir ${post.titulo}?`);
+  if (confirmDelete) {
+    try {
+      const response = await fetch(`${apiURL}/posts/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      showPosts();
+    }
+    catch (error) {
+      console.error('Falha ao deletar o componente:', error);
+    }
+  }
 }
