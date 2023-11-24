@@ -68,10 +68,10 @@ async function showComponents() {
 
     const textoHTML = componentsList.map(component => `
     <li>
-    <span class="qtd">${String(component.qtd).padStart(2, '0')}</span>
-    ${component.name}
-    <button value="${component.id}" class="edit"><i class="fas fa-edit"></i></button>
-    <button value="${component.id}" class="delete"><i class="fas fa-trash-alt"></i></button>
+      <span class="qtd">${String(component.qtd).padStart(2, '0')}</span>
+      ${component.name}
+      <button value="${component.id}" class="edit"><i class="fas fa-edit"></i></button>
+      <button value="${component.id}" class="delete"><i class="fas fa-trash-alt"></i></button>
     </li>
     `).join('');
 
@@ -113,11 +113,7 @@ async function handleEditSubmit(event) {
   };
 
   try {
-    console.log(componentsList);
-
     componentsList = componentsList.map(component => component.id == id ? updatedComponent : component);
-
-    console.log(componentsList);
 
     const response = await fetch(`${apiURL}/users/${userId}`, {
       method: 'PATCH',

@@ -37,23 +37,30 @@ section.conteudo {
 }
 
 .secao-comentarios {
-  padding: 1em 3em;
+  padding: 1em;
+}
+
+#comentar {
+  display: flex;
+  align-items: center;
 }
 
 #comentar input{
-  width: 60%;
+  flex: 3;
+  margin-right: .5em;
+  vertical-align: middle;
   padding: .6em;
   border: 1px solid #333;
   border-radius: .5vmax;
-  margin-bottom: 1em;
   font-size: 1em;
 }
 
 #comentar button {
- 	padding: 1em;
+  flex: 1;
+  margin: auto;
+  padding: 1em;
 	border: none;
 	border-radius: .5vmax;
-	margin-top: 1.5em;
 	background-color: var(--principal-blue);
 	color: var(--white);
 	font-weight: bold;
@@ -65,5 +72,4 @@ section.conteudo {
 
 section.comentarios {
   margin: 1em 0;
-
 }
