@@ -1,4 +1,3 @@
-const apiURL = 'https://jsonserver.joao-paulopa392.repl.co';
 let postsList;
 
 const form = document.querySelector('#modal form');
@@ -15,7 +14,7 @@ async function loadPosts() {
 
 function generateHTML(post) {
   const { id, titulo, categoria, comentarios, curtidas, conteudo, usuario } = post;
-  const isAuthor = usuario === JSON.parse(sessionStorage.getItem('user')).id;
+  const isAuthor = isLogged() && JSON.parse(sessionStorage.getItem('user')).id == usuario;
 
   return `
     <article ${isAuthor ? `class="autor"` : ''}>

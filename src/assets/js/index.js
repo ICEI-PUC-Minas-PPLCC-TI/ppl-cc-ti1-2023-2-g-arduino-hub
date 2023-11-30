@@ -1,3 +1,5 @@
+const apiURL = 'https://arduinohub--andreeluis.repl.co';
+
 const loginButton = document.querySelector('header nav .login');
 const myAccountButton = document.querySelector('header nav .my-account');
 

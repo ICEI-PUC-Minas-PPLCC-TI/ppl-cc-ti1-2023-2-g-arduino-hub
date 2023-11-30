@@ -1,4 +1,3 @@
-const apiUrl = 'https://jsonserver.joao-paulopa392.repl.co';
 const id = new URLSearchParams(location.search).get('id');
 let post;
 
@@ -7,14 +6,14 @@ document.querySelector('#comentar').addEventListener('submit', addComentario, fa
 document.querySelector('#curtir').addEventListener('click', addCurtida, false);
 
 async function loadPost() {
-  try { post = await (await fetch(`${apiUrl}/posts/${id}`)).json() }
+  try { post = await (await fetch(`${apiURL}/posts/${id}`)).json() }
   catch (error) { console.error('Falha ao carregar o post:', error) }
 }
 
 async function showPost() {
   try {
     await loadPost();
-
+    
     const comentariosHTML = post.comentarios.map(({ id, usuario, autor, comentario }) => `
       <li id="${id}-${usuario.slice(0, 8)}">${autor} - ${comentario}</li>
     `).join('');
@@ -45,7 +44,7 @@ async function addComentario(event) {
     comentario: document.querySelector('#comentario').value,
   };
 
-  fetch(`${apiUrl}/posts/${id}`, {
+  fetch(`${apiURL}/posts/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -62,7 +61,7 @@ async function addComentario(event) {
 async function addCurtida() {
   await loadPost();
 
-  fetch(`${apiUrl}/posts/${id}`, {
+  fetch(`${apiURL}/posts/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',

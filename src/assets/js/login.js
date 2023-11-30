@@ -1,4 +1,3 @@
-const apiURL = 'https://jsonserver--andreeluis.repl.co';
 let usersList = [];
 
 window.addEventListener('load', loadUsers, false);
