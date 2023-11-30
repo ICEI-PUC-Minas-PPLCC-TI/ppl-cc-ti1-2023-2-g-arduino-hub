@@ -2,50 +2,104 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Projetos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/projetos.css">
-    
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Projetos</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+	<link rel="stylesheet" href="assets/css/projetos.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+
 </head>
 
 <body>
-    <header>
-        <a href="criarprojeto.html" class="logo"> Arduino HUB </a>
+	<header>
+		<a href="../index.html" class="logo"> Arduino HUB </a>
 
-        <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu" />
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+		<!-- Hamburger icon -->
+		<input class="side-menu" type="checkbox" id="side-menu" />
+		<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
 
-        <!-- Menu -->
-        <nav>
-            <ul class="menu">
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="#">Ferramentas</a></li>
-                <li><a href="#">Fórum</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="projetos"></div>
-    </main>
-    <footer>
-        <section class="about">
-            <h3>Sobre</h3>
+		<!-- Menu -->
+		<nav>
+			<ul class="menu">
+				<li><a href="">Projetos</a></li>
+				<li><a href="../calculadora-resistor/">Ferramentas</a></li>
+				<li><a href="../gerenciar-estoque/">Componetes</a></li>
+				<li><a href="../forum/">Fórum</a></li>
+				<li class="login"><a href="../login.html">Login</a></li>
+				<li class="my-account dropdown-menu">
+					<a><i class="fas fa-user"></i></a>
 
-            <p>Política de privacidade</p>
-            <p>Quem somos nós</p>
-            <p>Fale conosco: email@contato.com</p>
-        </section>
+					<ul class="dropdown-content">
+						<li><a href="../profile.html">Minha Conta</a></li>
+						<li><a href="" id="logout">Sair</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
 
-        <section>
-            <h3>Links</h3>
-            <li>Documentação do Projeto: <a href="#">TI DOCS</a></li>
-        </section>
-    </footer>
+	<main>
+		<section class="projects-list">
+      <h2>Projetos</h2>
+
+      <button class="add-item" id="add-component">Novo Projeto</button>
+
+      <section id="projects">
+				<article>
+					<a href="post.html?id=0">
+						<h3 class="titulo">Teste Título</h3>
+					</a>
+					<p class="categoria">Teste Categoria</p>
+					<p class="categoria">Teste Categoria</p>
+
+					<p id="conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, voluptas quibusdam. Voluptas ratione, dolorem perspiciatis soluta quisquam consectetur voluptatum cumque quae tempore? Nobis nostrum fuga consectetur, quia illum laboriosam</p>
+				</article>
+			</section>
+    </section>
+
+    <!-- <section id="modal" class="modal-overlay">
+      <section class="modal-content">
+        <span id="close-modal"><i class="fas fa-times-circle"></i></span>
+        <h3 class="modal-title">PlaceHolder</h3>
+
+        <form>
+          <div class="input-field">
+            <label for="name">Nome</label>
+            <input id="name" type="text">
+          </div>
+
+          <div class="input-field">
+            <label for="qtd">Quantidade</label>
+            <input id="qtd" min="0" type="number">
+          </div>
+
+          <button></button>
+        </form>
+
+      </section>
+    </section> -->
+
+		<div id="projetos"></div>
+	</main>
+
+	<footer>
+		<section class="about">
+			<h3>Sobre</h3>
+
+			<p>Política de privacidade</p>
+			<p>Quem somos nós</p>
+			<p>Fale conosco: email@contato.com</p>
+		</section>
+
+		<section>
+			<h3>Links</h3>
+			<li>Documentação do Projeto: <a href="#">TI DOCS</a></li>
+		</section>
+	</footer>
 </body>
-<script src="projetos.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="../assets/js/index.js"></script>
 </html>

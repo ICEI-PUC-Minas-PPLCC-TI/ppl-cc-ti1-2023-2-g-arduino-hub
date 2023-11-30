@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Projetos</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/projetos.css">
+</head>
+
+<body>
+	<header>
+		<a href="../index.html" class="logo"> Arduino HUB </a>
+
+		<!-- Hamburger icon -->
+		<input class="side-menu" type="checkbox" id="side-menu" />
+		<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+		<!-- Menu -->
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Projetos</a></li>
+				<li><a href="../calculadora-resistor/">Ferramentas</a></li>
+				<li><a href="../gerenciar-estoque/">Componetes</a></li>
+				<li><a href="../forum/">Fórum</a></li>
+				<li class="login"><a href="../login.html">Login</a></li>
+				<li class="my-account dropdown-menu">
+					<a><i class="fas fa-user"></i></a>
+
+					<ul class="dropdown-content">
+						<li><a href="../profile.html">Minha Conta</a></li>
+						<li><a href="" id="logout">Sair</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+    <section class="info">
+      <h2 class="titulo"></h2>
+      <p class="categoria"></p>
+      <p>publicado por: <span class="autor"></span></p>
+    </section>
+
+    <div>
+      <hr>
+      <section class="conteudo"></section>
+    </div>
+  </main>
+
+	<footer>
+		<section class="about">
+			<h3>Sobre</h3>
+
+			<p>Política de privacidade</p>
+			<p>Quem somos nós</p>
+			<p>Fale conosco: email@contato.com</p>
+		</section>
+
+		<section>
+			<h3>Links</h3>
+			<li>Documentação do Projeto: <a href="#">TI DOCS</a></li>
+		</section>
+	</footer>
+</body>
+<script src="../assets/js/index.js"></script>
+<script src="assets/js/projeto.js"></script>
+</html>
