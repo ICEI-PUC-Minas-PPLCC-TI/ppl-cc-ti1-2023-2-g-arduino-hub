@@ -10,21 +10,6 @@ main article.autor {
 	border: 2px solid var(--principal-blue);
 }
 
-button#add-post {
-	float: right;
-	padding: 1em;
-	border: none;
-	border-radius: .5vmax;
-	margin-top: 1.5em;
-	background-color: var(--principal-blue);
-	color: var(--white);
-	font-weight: bold;
-}
-
-button#add-post:hover {
- 	cursor: pointer;
-}
-
 #posts {
 	display: inline-block;
 }

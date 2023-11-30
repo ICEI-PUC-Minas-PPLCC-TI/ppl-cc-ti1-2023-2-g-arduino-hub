@@ -1,10 +1,8 @@
-const apiURL = 'https://jsonserver--andreeluis.repl.co'
 let userId;
 let componentsList;
 let id;
 
 const form = document.querySelector('#modal form');
-
 
 
 if (isLogged()) {

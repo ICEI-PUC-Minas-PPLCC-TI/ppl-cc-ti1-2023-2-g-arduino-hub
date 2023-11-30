@@ -1,18 +1,3 @@
-.componet-list #add-component {
-  float: right;
-	padding: 1em;
-	border: none;
-	border-radius: .5vmax;
-	margin-top: 1.5em;
-	background-color: var(--principal-blue);
-	color: var(--white);
-	font-weight: bold;
-}
-
-.componet-list button:hover {
-  cursor: pointer;
-}
-
 .componet-list ul {
   display: inline-block;
   width: 100%;
