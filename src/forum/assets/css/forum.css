@@ -1,3 +1,32 @@
+/* Search bar */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.actions .order {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.actions .order>* {
+  margin: 0 .4em .6em;
+}
+
+.actions #add-post {
+  margin: auto .4em;
+}
+
+
+.order>* {
+  font-size: 1em;
+}
+
+
+
 #posts article .reactions {
   float: right;
 	vertical-align: middle;

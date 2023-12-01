@@ -45,7 +45,16 @@
     <section class="post-list">
       <h2>Fórum</h2>
 
-      <button class="add-item" id="add-post">Novo Post</button>
+      <section class="actions">
+        <form class="order">
+          <select name="order" id="order">
+            <option value="date" selected>Mais recentes</option>
+            <option value="likes">Mais curtidas</option>
+          </select>
+        </form>
+
+        <button class="add-item" id="add-post">Novo Post</button>
+      </section>
 
       <section class="itens-list" id="posts"></section>
     </section>

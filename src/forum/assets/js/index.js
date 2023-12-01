@@ -82,12 +82,14 @@ async function handleAddSubmit(event) {
   const newPost = {
     id: generateUUID(8),
     titulo: document.querySelector('#modal form #title').value,
+    dataPostagem: Date.now(),
     autor: JSON.parse(sessionStorage.getItem('user')).name,
     usuario: JSON.parse(sessionStorage.getItem('user')).id,
     imagem: '',
     categoria: document.querySelector('#modal form #category').value,
     conteudo: document.querySelector('#modal form #content').value,
     curtidas: 0,
+    usuariosCurtidas: [],
     comentarios: [],
   };
 
@@ -178,5 +180,25 @@ async function deletePost() {
     catch (error) {
       console.error('Falha ao deletar o componente:', error);
     }
+  }
+}
+
+
+// ORDER POSTS
+document.querySelector('.order').addEventListener('input', order, false);
+
+function order() {
+  const orderType = document.querySelector('#order').value;
+  console.log(orderType);
+
+  const sortFunctions = {
+    'date': (a, b) => new Date(b.dataPostagem) - new Date(a.dataPostagem),
+    'likes': (a, b) => b.curtidas - a.curtidas
+  };
+
+  if (sortFunctions[orderType]) {
+    const sortedPosts = postsList.sort(sortFunctions[orderType]);
+    const textoHTML = sortedPosts.map(generateHTML).join('');
+    document.querySelector("#posts").innerHTML = textoHTML;
   }
 }
