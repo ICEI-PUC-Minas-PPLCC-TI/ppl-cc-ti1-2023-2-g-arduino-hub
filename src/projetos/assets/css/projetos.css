@@ -1,84 +1,20 @@
-.card-content {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	max-height: 3em;
-}
-
-.card img {
-	max-width: 100%;
-	max-height: 250px;
-	object-fit: cover;
-}
-
-
-
-main article {
-	background-color: var(--light-grey);
-	margin: 2em auto;
-	padding: 1.5em 2.5em;
-	width: 90%;
-	border-radius: 1.5vmax;
-}
-
-main article.autor {
-	border: 2px solid var(--principal-blue);
-}
-
-#projects {
-	display: inline-block;
-}
-
-#projects a {
-	color: inherit;
-}
-
-#projects article h3 {
-	color: var(--principal-blue);
-  display: inline;
-  margin: 0 1em 0 0;
-  vertical-align: middle;
-}
-
-#projects article p.categoria {
+.itens-list article p.dificuldade {
   display: inline-block;
-  padding: .3em .6em;
-  background-color: var(--grey);
+	padding: .3em .6em;
 	color: var(--white);
 	font-weight: bold;
-  border-radius: .5vmax;
+	border-radius: .5vmax;
 }
 
-#projects article .engajamento {
-	display: inline;
-	vertical-align: middle;
-	font-size: 1.2em;
-	float: right;
+.itens-list article p.easy {
+  background-color: var(--light-green);
 }
 
-#projects article .engajamento span {
-	margin-right: 1em;
+.itens-list article p.medium {
+  background-color: var(--light-yellow);
+  color: var(--black);
 }
 
-#projects article .engajamento button {
-  padding: 0;
-  border: none;
-  background: none;
-  font-size: 1em;
-}
-
-#projects article .engajamento button:hover {
-  cursor: pointer;
-}
-
-#projects article .engajamento .edit {
-  color: var(--blue);
-}
-
-#projects article .engajamento .delete {
-  color: var(--red);
-}
-
-#projects article .engajamento button i {
-  margin-left: .5em;
+.itens-list article p.hard {
+  background-color: var(--light-red);
 }

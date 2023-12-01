@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 	<link rel="stylesheet" href="assets/css/projetos.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/modal.css">
 
 </head>
 
@@ -45,9 +46,9 @@
 		<section class="projects-list">
       <h2>Projetos</h2>
 
-      <button class="add-item" id="add-component">Novo Projeto</button>
+      <button class="add-item" id="add-project">Novo Projeto</button>
 
-      <section id="projects">
+      <section class="itens-list" id="projects">
 				<article>
 					<a href="post.html?id=0">
 						<h3 class="titulo">Teste Título</h3>
@@ -60,27 +61,45 @@
 			</section>
     </section>
 
-    <!-- <section id="modal" class="modal-overlay">
+    <section id="modal" class="modal-overlay">
       <section class="modal-content">
         <span id="close-modal"><i class="fas fa-times-circle"></i></span>
-        <h3 class="modal-title">PlaceHolder</h3>
+        <h3 class="modal-title"></h3>
 
         <form>
           <div class="input-field">
-            <label for="name">Nome</label>
-            <input id="name" type="text">
+            <label for="title">Título</label>
+            <input id="title" type="text">
           </div>
 
           <div class="input-field">
-            <label for="qtd">Quantidade</label>
-            <input id="qtd" min="0" type="number">
+            <label for="category">Categoria</label>
+            <input id="category" type="text">
+          </div>
+
+					<div class="input-field">
+						<label for="difficulty">Dificuldade</label>
+						<select id="difficulty" required>
+							<option value="easy">Fácil</option>
+							<option value="medium">Médio</option>
+							<option value="hard">Difícil</option>
+						</select>
+					</div>
+
+          <div class="input-field">
+            <label for="content">Conteúdo</label>
+            <textarea id="content" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="input-field">
+
           </div>
 
           <button></button>
         </form>
 
       </section>
-    </section> -->
+    </section>
 
 		<div id="projetos"></div>
 	</main>
@@ -101,5 +120,6 @@
 	</footer>
 </body>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/modal.js"></script>
 <script src="../assets/js/index.js"></script>
 </html>
