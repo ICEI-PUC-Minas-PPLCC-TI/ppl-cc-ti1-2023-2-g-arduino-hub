@@ -347,16 +347,28 @@ form .input-field label {
 	margin-top: 1em;
 }
 
+input,
+textarea,
+select {
+	outline: none;
+	border: 1px solid var(--grey);
+	border-radius: .5vmax;
+	padding: 0.5em;
+	font-size: 1.3em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border: 2px solid var(--principal-blue);
+}
+
 form .input-field input,
 form .input-field textarea,
 form .input-field select {
 	max-width: 100%;
 	min-width: 100%;
 	margin-top: 0.5em;
-	padding: 0.5em;
-	border: 1px solid var(--grey);
-	border-radius: .5vmax;
-	font-size: 1.3em;
 }
 
 form button {
