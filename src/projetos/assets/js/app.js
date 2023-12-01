@@ -23,7 +23,7 @@ function generateHTML(project) {
 
   return `
     <article ${isAuthor ? `class="autor"` : ''}>
-      <a href="projeto.html?id=0">
+      <a href="projeto.html?id=${id}">
         <h3 class="titulo">${titulo}</h3>
       </a>
       <p class="categoria">${categoria}</p>
