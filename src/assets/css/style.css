@@ -209,6 +209,85 @@ main {
 	padding: 0 1em;
 }
 
+button.add-item {
+	float: right;
+	padding: 1em;
+	border: none;
+	border-radius: .5vmax;
+	margin-top: 1.5em;
+	background-color: var(--principal-blue);
+	color: var(--white);
+	font-weight: bold;
+}
+
+button.add-item:hover {
+	 cursor: pointer;
+}
+
+/* ARTICLE LISTS */
+.itens-list {
+	width: 100%;
+	display: inline-block;
+}
+
+.itens-list article {
+	background-color: var(--light-grey);
+	margin: 2em auto;
+	padding: 1.5em 2.5em;
+	width: 90%;
+	border-radius: 1.5vmax;
+}
+
+.itens-list article.autor {
+	border: 2px solid var(--principal-blue);
+}
+
+.itens-list article h3 {
+	color: var(--principal-blue);
+  display: inline;
+  margin: 0 1em 0 0;
+  vertical-align: middle;
+}
+
+.itens-list article .handle-item {
+	float: right;
+	vertical-align: middle;
+	font-size: 1.2em;
+}
+
+.itens-list article .handle-item button {
+	padding: 0;
+	border: none;
+	background: none;
+	font-size: 1em;
+}
+
+.itens-list article .handle-item button:hover {
+	cursor: pointer;
+}
+
+.itens-list article .handle-item button i {
+	margin-left: .5em;
+}
+
+.itens-list article .handle-item button.edit {
+	color: var(--blue);
+}
+
+.itens-list article .handle-item button.delete {
+	color: var(--red);
+}
+
+.itens-list article p.categoria {
+	display: inline-block;
+	padding: .3em .6em;
+	background-color: var(--grey);
+	color: var(--white);
+	font-weight: bold;
+	border-radius: .5vmax;
+}
+
+
 /* FOOTER */
 footer {
 	display: grid;
@@ -269,7 +348,8 @@ form .input-field label {
 }
 
 form .input-field input,
-form .input-field textarea {
+form .input-field textarea,
+form .input-field select {
 	max-width: 100%;
 	min-width: 100%;
 	margin-top: 0.5em;

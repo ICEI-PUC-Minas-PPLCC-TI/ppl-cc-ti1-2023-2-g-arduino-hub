@@ -1,4 +1,3 @@
-const apiURL = 'https://jsonserver--andreeluis.repl.co/arduino';
 let arduinoParts = [];
 
 window.addEventListener('load', showParts, false);
@@ -8,7 +7,7 @@ document.querySelector('#close-modal').addEventListener('click', closeModal, fal
 window.addEventListener('click', event => { event.target == modal ? closeModal() : null; }, false);
 
 async function loadParts() {
-  try { arduinoParts = await (await fetch(`${apiURL}`)).json() }
+  try { arduinoParts = await (await fetch(`${apiURL}/arduino`)).json() }
   catch (error) { console.error('Falha ao carregar componentes:', error)}
 }
 
