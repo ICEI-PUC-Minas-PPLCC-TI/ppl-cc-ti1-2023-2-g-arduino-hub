@@ -21,17 +21,22 @@ function generateHTML(post) {
       <a href="post.html?id=${id}">
         <h3 class="titulo">${titulo}</h3>
       </a>
-      <p class="categoria">${categoria}</p>
-      <div class="engajamento">
+      ${isAuthor ? `
+      <div class="handle-item">
+        <span>
+          <button value="${id}" class="edit"><i class="fas fa-edit"></i></button>
+          <button value="${id}" class="delete"><i class="fas fa-trash-alt"></i></button>
+        </span>
+      </div>` :
+      '' }
+
+      <div class="reactions">
         <span><i class="far fa-comment-alt"></i> ${comentarios.length}</span>
         <span><i class="far fa-thumbs-up"></i> ${curtidas}</span>
-        ${isAuthor ?
-          `<span>
-            <button value="${id}" class="edit"><i class="fas fa-edit"></i></button>
-            <button value="${id}" class="delete"><i class="fas fa-trash-alt"></i></button>
-          </span>` :
-          ''}
       </div>
+
+      <p class="categoria">${categoria}</p>
+
       <p id="conteudo">${conteudo}</p>
     </article>`;
 }
