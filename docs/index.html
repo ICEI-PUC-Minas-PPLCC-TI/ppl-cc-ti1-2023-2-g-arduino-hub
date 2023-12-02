@@ -510,7 +510,7 @@
                 </p>
               </section>
               <section>
-                <h5>Funcionalidade 2 - Cadastro de Projetos</h5>
+                <h5>Funcionalidade 2 - Cadastro de projetos</h5>
                 <p>Permite ao usuário cadastrar projetos no site.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
@@ -534,7 +534,7 @@
                         <ul>
                           <li>Basta clicar no icone de exclusão</li>
                           <li>Em seguida, irá aparecer um alert</li>
-                          <li>O usuário deverá clicar em "OK"</li>
+                          <li>O usuário deverá clicar em "OK" para confirmar a exclusão do projeto</li>
                       </ul>
                     </ul>
                   </li>
@@ -544,7 +544,7 @@
                 </p>
               </section>
               <section>
-                <h5>Funcionalidade 3 - Pesquisa de Projetos</h5>
+                <h5>Funcionalidade 3 - Pesquisa de projetos</h5>
                 <p>Permite ao usuário pesquisar projetos cadastrados por nome e nível de dificuldade.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
@@ -561,22 +561,39 @@
                 </p>
               </section>
               <section>
-                <h5>Funcionalidade 4 - Cadastro de posts (forum)</h5>
-                <p>Permite ao usuario Cadastrar posts no forum</p>
+                <h5>Funcionalidade 4 - Cadastro de posts (fórum)</h5>
+                <p>Permite ao usuário cadastrar posts no fórum.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
                   <li><strong>Instruções de acesso: </strong>
                     <ul>
                       <li>Abra o site</li>
                       <li>Faça o login</li>
-                      <li>Acesse a aba "forum"</li>
-                      <li>Em seguida, clique no botão "novo post"</li>
-                      <ul>
-                        <li>Preencha os campos</li>
-                        <li>Clique no botão "Adicionar"</li>
-                      </ul>
-                      <li>Depois voce ira voltar para a tela de exibição de posts</li>
-                    </ul>
+                      <li>Acesse a aba "Fórum"</li>
+                      <li>Caso o usuário deseje adicionar um novo post:
+                        <ul>
+                          <li>Deve clicar em "Novo Post"</li>
+                          <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Adicionar" para cadastrar o novo post</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje editar um post já cadastrado:
+                        <ul>
+                          <li>Deve clicar no botão "Editar" do post desejado</li>
+                          <li>Em seguida, um modal para editar os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Editar" para editar o post</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje excluir um post já cadastrado:
+                        <ul>
+                          <li>Basta clicar no icone de exclusão</li>
+                          <li>Em seguida, irá aparecer um alert</li>
+                          <li>O usuário deverá clicar em "OK" para confirmar a exclusão do post</li>
+                        </ul>
+                      </li>                      
+                    </ul>                   
                   </li>
                 </ul>
                 <p class="text-center">
@@ -585,7 +602,7 @@
               </section>
               <section>
                 <h5>Funcionalidade 5 - Cadastro de comentários e curtidas nos posts</h5>
-                <p>Permite ao usuario cadastrar comentario e curtidas nos posts</p>
+                <p>Permite o usuario cadastrar comentário e curtidas nos posts.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
                   <li><strong>Instruções de acesso: </strong>
@@ -593,9 +610,9 @@
                       <li>Abra o site</li>
                       <li>Faça o login</li>
                       <li>Clique no nome do post</li>
-                      <li>Digite no campo o comentario que deseja publicar</li>
-                      <li>Depois clique no botao "comentar"</li>
-                      <li>Caso queira apagar clique no icone da lixeira</li>
+                      <li>Digite no campo o comentário que deseja publicar</li>
+                      <li>Em seguida, clique no botão "Comentar"</li>
+                      <li>Caso queira apagar basta clicar no ícone da lixeira</li>
                     </ul>
                   </li>
                 </ul>
@@ -605,7 +622,7 @@
               </section>
               <section>
                 <h5>Funcionalidade 6 - Ordenação de posts</h5>
-                <p>Permite ao usuário ordenar a visualização dos posts por <strong>mais recente</strong> ou <strong>mais curtido</strong>.</p>
+                <p>Permite o usuário ordenar a visualização dos posts por <strong>mais recente</strong> ou <strong>mais curtido</strong>.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
                   <li><strong>Instruções de acesso: </strong>
@@ -636,7 +653,7 @@
                       <li>Abra o site e faça login na sua conta</li>
                       <li>Acesse a aba "Componentes"</li>
                       <li>Será exibida a lista de componentes cadastrada pelo usuário conectado</li>
-                      <li>Caso o usuário deseje adicionar um novo projeto:
+                      <li>Caso o usuário deseje adicionar um novo componente:
                         <ul>
                           <li>Deve clicar em "Novo Componente"</li>
                           <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
