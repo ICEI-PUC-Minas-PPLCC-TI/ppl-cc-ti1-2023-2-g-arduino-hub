@@ -181,3 +181,31 @@ async function deleteProject() {
     }
   }
 }
+
+
+// SEARCH
+document.querySelector('.search-bar').addEventListener('input', search, false);
+
+
+function normalizeString(str) {
+  return str.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+}
+
+function search() {
+  const query = normalizeString(document.querySelector('.search-bar #search').value);
+  const difficulty = document.querySelector('#difficulty').value;
+
+  const filteredProjects = projectsList.filter(project => {
+    const { dificuldade, titulo, categoria, conteudo, autor } = project;
+    return normalizeString(dificuldade).includes(difficulty) && (
+      normalizeString(titulo).includes(query) ||
+      normalizeString(categoria).includes(query) ||
+      normalizeString(conteudo).includes(query) ||
+      normalizeString(autor).includes(query)
+    )
+  });
+
+  const textoHTML = filteredProjects.map(generateHTML).join('');
+
+  document.querySelector("#projects").innerHTML = textoHTML;
+}

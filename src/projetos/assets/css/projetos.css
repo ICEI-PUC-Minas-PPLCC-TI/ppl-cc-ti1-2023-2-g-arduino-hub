@@ -1,3 +1,44 @@
+/* Search bar */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.actions .search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.actions .search-bar>* {
+  margin: 0 .4em .6em;
+}
+
+.actions #add-project {
+  margin: auto .4em;
+}
+
+
+.search-bar>* {
+  font-size: 1em;
+}
+
+.search-bar select {
+  margin-left: 1em;
+  color: var(--black);
+}
+
+.search-bar button.search {
+  width: auto;
+  height: 100%;
+  margin: auto 1em;
+  padding: 0.5em 0.8em;
+	font-size: 1em;
+}
+
+
 .itens-list article p.dificuldade {
   display: inline-block;
 	padding: .3em .6em;
