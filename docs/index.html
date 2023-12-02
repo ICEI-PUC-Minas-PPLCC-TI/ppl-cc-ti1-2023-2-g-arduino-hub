@@ -603,6 +603,86 @@
                   <img class="img-fluid" src="assets/images/funcionalidade-cadastro-de-comentario-e-curtida.png" alt="Tela Cadastro de Contatos">
                 </p>
               </section>
+              <section>
+                <h5>Funcionalidade 6 - Ordenação de posts</h5>
+                <p>Permite ao usuário ordenar a visualização dos posts por <strong>mais recente</strong> ou <strong>mais curtido</strong>.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site e acesse a aba "Fórum"</li>
+                      <li>A lista de posts já cadastrados irá ser exibida</li>
+                      <li>Será exibido na parte superior da página um menu dropdown</li>
+                      <li>O usuário poderá selecionar:
+                        <ul>
+                          <li>Mais recentes</li>
+                          <li>Mais curtidos</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-ordenar-posts.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 7 - Estoque de componentes</h5>
+                <p>Permite o usuário gerenciar o seus componentes eletrônicos usados em projetos com Arduino.</strong></p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_usuarios">Usuários</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site e faça login na sua conta</li>
+                      <li>Acesse a aba "Componentes"</li>
+                      <li>Será exibida a lista de componentes cadastrada pelo usuário conectado</li>
+                      <li>Caso o usuário deseje adicionar um novo projeto:
+                        <ul>
+                          <li>Deve clicar em "Novo Componente"</li>
+                          <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Adicionar" para cadastrar o novo componente</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje editar um componente já cadastrado:
+                        <ul>
+                          <li>Deve clicar no botão "Editar" do componente desejado</li>
+                          <li>Em seguida, um modal para editar os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Editar" para editar o componente</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje excluir um componente já cadastrado:
+                        <ul>
+                          <li>Deve clicar no botão "Excluir" do componente desejado</li>
+                          <li>Em seguida, um modal para confirmar a exclusão irá abrir</li>
+                          <li>O usuário deverá clicar em "Excluir" para confirmar a exclusão do componente</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-estoque.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 8 - Calculadora de Resistor</h5>
+                <p>Permite o usuário encontrar a especificação do resistor, baseado no código de cores.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o e acesse a aba "Ferramentas"</li>
+                      <li>Será exibida a calculadora de resistor</li>
+                      <li>O usuário deve informar as 4 cores do resistor</li>
+                      <li>O sistema devolve a resistência calculada</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-resistor.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
             </section>
 
             <!-- Estruturas de dados =============== -->
@@ -672,6 +752,32 @@
                   "comentarios": []
                 }
                 </pre>
+              </section>
+              <section id="ti_ed_usuarios">
+                <h5>Estrutura de Dados - Usuários</h5>
+                <p>Usuários da aplicação</p>
+                <pre wrap="wrap">
+                {
+                  "id": "ca5bd6fa-f820-4109-8d28-5acacf899580",
+                  "name": "André Luís",
+                  "username": "andrels",
+                  "email": "andrels@andrels.net",
+                  "password": "andrels123",
+                  "components": [
+                    {
+                      "id": "913034d5",
+                      "name": "Arduino Mega",
+                      "qtd": 12
+                    },
+                    {
+                      "id": "a331d17d",
+                      "name": "Protoboard",
+                      "qtd": 2
+                    }
+                  ]
+                }
+                </pre>
+                <p>Esse JSON armazena tanto os usuários, tanto os componentes que cada usuário possui (da sessão de cadastro de componentes).</p>
               </section>
             </section>
 
