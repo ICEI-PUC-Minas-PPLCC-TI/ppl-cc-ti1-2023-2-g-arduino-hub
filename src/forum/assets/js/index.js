@@ -44,7 +44,9 @@ async function showPosts() {
   try {
     await loadPosts();
 
-    const textoHTML = postsList.map(generateHTML).join('');
+    orderPostsList = orderList();
+
+    const textoHTML = orderPostsList.map(generateHTML).join('');
 
     document.querySelector("#posts").innerHTML = textoHTML;
 
@@ -186,11 +188,11 @@ async function deletePost() {
 
 
 // ORDER POSTS
-document.querySelector('.order').addEventListener('input', order, false);
+document.querySelector('.order').addEventListener('input', showPosts, false);
 
-function order() {
+function orderList()
+{
   const orderType = document.querySelector('#order').value;
-  console.log(orderType);
 
   const sortFunctions = {
     'date': (a, b) => new Date(b.dataPostagem) - new Date(a.dataPostagem),
@@ -198,8 +200,6 @@ function order() {
   };
 
   if (sortFunctions[orderType]) {
-    const sortedPosts = postsList.sort(sortFunctions[orderType]);
-    const textoHTML = sortedPosts.map(generateHTML).join('');
-    document.querySelector("#posts").innerHTML = textoHTML;
+    return postsList.sort(sortFunctions[orderType]);
   }
 }
