@@ -29,6 +29,20 @@ function logout(event) {
   location.reload();
 }
 
+function usernameExists(username) {
+  return fetch(`${apiURL}/users?username=${username}`)
+    .then(response => response.json())
+    .then(data => data.length > 0 ? true : false)
+    .catch(error => console.error('Falha ao verificar se o usuário existe:', error));
+}
+
+function emailExists(email) {
+  return fetch(`${apiURL}/users?email=${email}`)
+    .then(response => response.json())
+    .then(data => data.length > 0 ? true : false)
+    .catch(error => console.error('Falha ao verificar se o email existe:', error));
+}
+
 function generateUUID(qtde) {
   uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
     var r = Math.random() * 16 | 0,

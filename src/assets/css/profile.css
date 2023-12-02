@@ -1,0 +1,15 @@
+.edit-profile {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.profile-form,
+.change-password {
+	min-width: 300px;
+}
+
+#delete-account button{
+	background-color: var(--red);
+}
