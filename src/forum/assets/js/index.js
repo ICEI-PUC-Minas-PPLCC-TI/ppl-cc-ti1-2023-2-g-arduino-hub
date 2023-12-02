@@ -3,7 +3,6 @@ let postsList;
 const form = document.querySelector('#modal form');
 
 window.addEventListener('load', showPosts, false);
-window.onbeforeunload = () => showPosts();
 document.querySelector('#add-post').addEventListener('click', addPost, false);
 
 // READ
@@ -32,7 +31,7 @@ function generateHTML(post) {
 
       <div class="reactions">
         <span><i class="far fa-comment-alt"></i> ${comentarios.length}</span>
-        <span><i class="${post.usuariosCurtidas.includes(user.id) ? 'fas' : 'far'} fa-thumbs-up"></i> ${curtidas}</span>
+        <span><i class="${user && post.usuariosCurtidas.includes(user.id) ? 'fas' : 'far'} fa-thumbs-up"></i> ${curtidas}</span>
       </div>
 
       <p class="categoria">${categoria}</p>
@@ -56,6 +55,8 @@ async function showPosts() {
     document.querySelectorAll('.delete').forEach(button => {
       button.addEventListener('click', deletePost, false);
     });
+
+    order();
   }
   catch (error) {
     console.error('Falha ao exibir os posts:', error);

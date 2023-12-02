@@ -73,3 +73,29 @@ section.conteudo {
 section.comentarios {
   margin: 1em 0;
 }
+
+ul.comentarios li {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+ul.comentarios .handle-item {
+  display: inline;
+	vertical-align: middle;
+  margin: 0 1em;
+}
+
+ul.comentarios .handle-item button {
+  padding: 0;
+	border: none;
+	background: none;
+	font-size: 1em;
+}
+
+ul.comentarios .handle-item button:hover {
+  cursor: pointer;
+}
+
+ul.comentarios .handle-item button.delete {
+	color: var(--red);
+}
