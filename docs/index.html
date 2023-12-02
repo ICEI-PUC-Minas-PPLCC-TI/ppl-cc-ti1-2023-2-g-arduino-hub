@@ -492,19 +492,22 @@
               </div>
 
               <section>
-                <h5>Funcionalidade 1 - Cadastro de Contatos<span class="exemplo">EXEMPLO</span></h5>
-                <p>Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema</p>
+                <h5>Funcionalidade 1 - Exibir detalhes do Arduino</h5>
+                <p>Permite ao usuário interagir com o Arduino, clicando nos componentes do Arduino e visualizando o detalhamento do componente.</p>
                 <ul class="list-unstyled">
-                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_contatos">Contatos</a></li>
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_arduino">Arduino</a></li>
                   <li><strong>Instruções de acesso: </strong>
                     <ul>
-                      <li>Abra o site e efetue o login</li>
-                      <li>Acesse o menu principal e escolha a opção Cadastros </li>
-                      <li>Em seguida, escolha a opção Contatos</li>
+                      <li>Abra o site (não necessita de login)</li>
+                      <li>Clique no componente que deseja visualizar os detalhes</li>
+                      <li>Em seguida, um modal com os detalhes irá abrir</li>
                     </ul>
                   </li>
                 </ul>
-                <p class="text-center"><img class="img-fluid" src="assets/images/exemplo-funcionalidade.png" alt="Tela Cadastro de Contatos"></p>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-home.png" alt="Tela Cadastro de Contatos">
+                  <img class="img-fluid" src="assets/images/funcionalidade-home-detalhe.png" alt="Tela Cadastro de Contatos">
+                </p>
               </section>
             </section>
 
@@ -519,20 +522,25 @@
                 <p>Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.</p>
               </div>
 
-              <section>
-                <h5>Estrutura de Dados - Contatos<span class="exemplo">EXEMPLO</span></h5>
-                <p>Contatos da aplicação</p>
-                <pre>
-                  {
-                    "id": 1,
-                    "nome": "Leanne Graham",
-                    "cidade": "Belo Horizonte",
-                    "categoria": "amigos",
-                    "email": "Sincere@april.biz",
-                    "telefone": "1-770-736-8031",
-                    "website": "hildegard.org"
+              <section id="ti_ed_arduino">
+                <h5>Estrutura de Dados - Arduino</h5>
+                <p>Partes do Arduino</p>
+                <pre wrap="wrap">
+                {
+                  "id": 1,
+                  "name": "Pinos digitais de entrada e saída",
+                  "descricao": "Pinos que podem ser programados para agirem como entradas ou saídas fazendo com que o Arduino interaja com o meio externo.",
+                  "coords": {
+                    "x": 317,
+                    "y": 48,
+                    "radius": 25,
+                    "smx": 173,
+                    "smy": 26,
+                    "smradius": 18
                   }
+                }
                 </pre>
+                <p>Esse JSON gera dois <strong>imagemap</strong>, um para desktop e outro para mobile. Dessa forma, precisamos usar coordenadas para desktop e coordenadas para mobile (sm).</p>
               </section>
 
               <section>
