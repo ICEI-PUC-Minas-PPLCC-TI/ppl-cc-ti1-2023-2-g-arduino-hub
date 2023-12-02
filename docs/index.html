@@ -509,6 +509,57 @@
                   <img class="img-fluid" src="assets/images/funcionalidade-home-detalhe.png" alt="Tela Cadastro de Contatos">
                 </p>
               </section>
+              <section>
+                <h5>Funcionalidade 2 - Cadastro de Projetos</h5>
+                <p>Permite ao usuário cadastrar projetos no site.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site e acesse a aba "Projetos"</li>
+                      <li>A lista de projetos já cadastrados irá ser exibida</li>
+                      <li>Caso o usuário deseje adicionar um novo projeto:</li>
+                        <ul>
+                          <li>Deve-se fazer o login e clicar em "Novo Projeto"</li>
+                          <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Adicionar" para cadastrar o projeto</li>
+                        </ul>
+                      <li>Caso o usuário já tenha criado um projeto e deseje editá-lo:</li>
+                        <ul>
+                          <li>Basta clicar no icone de edição</li>
+                          <li>Em seguida, um modal para editar os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Editar" para editar o projeto</li>
+                      </ul>
+                      <li>Caso o usuário já tenha criado um projeto e deseje excluí-lo:</li>
+                        <ul>
+                          <li>Basta clicar no icone de exclusão</li>
+                          <li>Em seguida, irá aparecer um alert</li>
+                          <li>O usuário deverá clicar em "OK"</li>
+                      </ul>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-cadastro_de_projetos.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 3 - Pesquisa de Projetos</h5>
+                <p>Permite ao usuário pesquisar projetos cadastrados por nome e nível de dificuldade.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site (não necessita de login)</li>
+                      <li>Acesse a aba "Projetos"</li>
+                      <li>Em seguida, escreva o nome do projeto e/ou selecione o nível de dificuldade desejado</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-pesquisa_de_projetos.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
             </section>
 
             <!-- Estruturas de dados =============== -->
@@ -543,18 +594,19 @@
                 <p>Esse JSON gera dois <strong>imagemap</strong>, um para desktop e outro para mobile. Dessa forma, precisamos usar coordenadas para desktop e coordenadas para mobile (sm).</p>
               </section>
 
-              <section>
-                <h5>Estrutura de Dados - Usuários<span class="exemplo">EXEMPLO</span></h5>
-                <p>Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
-                <pre>
-                  {
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    email: "admin@abc.com"
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    login: "admin"
-                    nome: "Administrador do Sistema"
-                    senha: "123"
-                  }
+              <section id="ti_ed_projetos">
+                <h5>Estrutura de Dados - Projetos</h5>
+                <p>Projetos adicionados site.</p>
+                <pre wrap="wrap">
+                {
+                  "id": "00873583",
+                  "titulo": "Semáforo com Arduino",
+                  "categoria": "Primeiro projeto",
+                  "dificuldade": "easy",
+                  "conteudo": "Este é o projeto semáforo com Arduino...",
+                  "autor": "André Luís",
+                  "usuario": "ca5bd6fa-f820-4109-8d28-5acacf899580"
+                }
                 </pre>
               </section>
             </section>
