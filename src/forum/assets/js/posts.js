@@ -15,13 +15,24 @@ async function showPost() {
     await loadPost();
 
     const comentariosHTML = post.comentarios.map(({ id, usuario, autor, comentario }) => `
-      <li id="${id}-${usuario.slice(0, 8)}">${autor} - ${comentario}</li>
+      <li id="${id}">
+        ${autor} - ${comentario}
+        ${isLogged() &&
+          (JSON.parse(sessionStorage.getItem('user')).id == usuario ||
+           JSON.parse(sessionStorage.getItem('user')).id == post.usuario)? `
+          <div class="handle-item">
+            <span>
+              <button value="${id}" class="delete"><i class="fas fa-trash-alt"></i></button>
+            </span>
+          </div>` :
+        '' }
+      </li>
     `).join('');
 
 		document.querySelector('.titulo').innerHTML = post.titulo;
 		document.querySelector('.categoria').innerHTML = post.categoria;
 
-    if (post.usuariosCurtidas.includes(user.id)) {
+    if (user && post.usuariosCurtidas.includes(user.id)) {
       document.querySelector('#curtir i').classList.replace('far', 'fas');
     } else {
       document.querySelector('#curtir i').classList.replace('fas', 'far');
@@ -34,6 +45,11 @@ async function showPost() {
 		document.querySelector('.conteudo').innerHTML = `<p>${post.conteudo}</p>`;
 
 		document.querySelector('.comentarios').innerHTML = `${comentariosHTML}`;
+
+    // Event listeners
+    document.querySelectorAll('.delete').forEach(button => {
+      button.addEventListener('click', deleteComment, false);
+    });
   } catch (error) {
     console.error('Falha ao carregar e exibir os posts:', error);
   }
@@ -41,6 +57,12 @@ async function showPost() {
 
 async function addComentario(event) {
   event.preventDefault();
+
+  if (!isLogged())
+  {
+    alert('Você precisa estar conectado para comentar em um post!');
+    window.location.href = '../login.html';
+  }
 
   await loadPost();
 
@@ -65,8 +87,44 @@ async function addComentario(event) {
     });
 }
 
+async function deleteComment() {
+  const id = this.value;
+  const comentario = post.comentarios.find(comentario => comentario.id == id);
+
+  const confirmDelete = window.confirm(`Você realmente quer excluir o comentário: "${comentario.comentario}"?`);
+  if (confirmDelete) {
+    try {
+      commentList = post.comentarios.filter(comentario => comentario.id != id);
+
+      const response = await fetch(`${apiURL}/posts/${post.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ comentarios: commentList })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      showPost();
+    }
+    catch (error) {
+      console.error('Falha ao deletar o comentário:', error);
+    }
+  }
+}
+
 async function curtir() {
   await loadPost();
+
+  if (!isLogged())
+  {
+    alert('Você precisa estar conectado para curtir um post!');
+    window.location.href = '../login.html';
+  }
+
 
   const usuariosCurtidas = post.usuariosCurtidas;
 
