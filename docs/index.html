@@ -560,6 +560,49 @@
                   <img class="img-fluid" src="assets/images/funcionalidade-pesquisa_de_projetos.png" alt="Tela Cadastro de Contatos">
                 </p>
               </section>
+              <section>
+                <h5>Funcionalidade 4 - Cadastro de posts (forum)</h5>
+                <p>Permite ao usuario Cadastrar posts no forum</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site</li>
+                      <li>Faça o login</li>
+                      <li>Acesse a aba "forum"</li>
+                      <li>Em seguida, clique no botão "novo post"</li>
+                      <ul>
+                        <li>Preencha os campos</li>
+                        <li>Clique no botão "Adicionar"</li>
+                      </ul>
+                      <li>Depois voce ira voltar para a tela de exibição de posts</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-cadastro_de_post.PNG" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 5 - Cadastro de comentários e curtidas nos posts</h5>
+                <p>Permite ao usuario cadastrar comentario e curtidas nos posts</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site</li>
+                      <li>Faça o login</li>
+                      <li>Clique no nome do post</li>
+                      <li>Digite no campo o comentario que deseja publicar</li>
+                      <li>Depois clique no botao "comentar"</li>
+                      <li>Caso queira apagar clique no icone da lixeira</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-cadastro-de-comentario-e-curtida.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
             </section>
 
             <!-- Estruturas de dados =============== -->
@@ -606,6 +649,27 @@
                   "conteudo": "Este é o projeto semáforo com Arduino...",
                   "autor": "André Luís",
                   "usuario": "ca5bd6fa-f820-4109-8d28-5acacf899580"
+                }
+                </pre>
+              </section>
+
+              <section id="ti_ed_posts">
+                <h5>Estrutura de Dados - Posts</h5>
+                <p>Postagens realizadas no fórum</p>
+                <pre wrap="wrap">
+                {
+                  "id": "99e45125",
+                  "titulo": "Meu segundo post",
+                  "dataPostagem": 1701480764326,
+                  "autor": "André Luís",
+                  "usuario": "ca5bd6fa-f820-4109-8d28-5acacf899580",
+                  "categoria": "Conhecendo o site",
+                  "conteudo": "Olá,\n estou conhecendo o site!",
+                  "curtidas": 1,
+                  "usuariosCurtidas": [
+                      "03915cdc-2854-4168-ae21-0cceafd379be"
+                  ],
+                  "comentarios": []
                 }
                 </pre>
               </section>
