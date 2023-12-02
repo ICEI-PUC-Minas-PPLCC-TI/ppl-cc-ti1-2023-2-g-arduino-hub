@@ -461,35 +461,21 @@
           <!-- Funcionalidades ==================== -->
           <section id="ti_solucao">
             <h2>Solução</h2>
-            <p class="lead">Esta seção apresenta todos os detalhes da solução criada no projeto.
-              <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse" href="#collapseSolucao">Info</button>
-            </p>
-            <div class="alert alert-warning collapse" role="alert" id="collapseSolucao">
-              <p>Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.</p>
-              <p>Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.</p>
-            </div>
+            <p class="lead">Esta seção apresenta todos os detalhes da solução criada no projeto.</p>
 
             <section id="ti_video">
               <h4>Video do Projeto</h4>
-              <p>O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução.
-                <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse" href="#collapseVideo">Info</button>
-              </p>
-              <div class="alert alert-warning collapse" role="alert" id="collapseVideo">
-                <p>O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.</p>
-                <p>Utilize o recurso de compartilhamento via embed e inclua o vídeo logo abaixo.</p>
+              <p>O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução.</p>
+
+              <div class="d-flex justify-content-center align-items-center">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gzAvoczQrrA?si=m78zFAxfTePzC-H1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
-              <p>...... COLOQUE AQUI O SEU VIDEO ......</p>
+
             </section>
 
             <section id="ti_funcionalidades">
               <h4>Funcionalidades</h4>
-              <p>Esta seção apresenta as funcionalidades da solução.
-                <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse" href="#collapseFuncionalidades">Info</button>
-              </p>
-              <div class="alert alert-warning collapse" role="alert" id="collapseFuncionalidades">
-                <p>Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.</p>
-                <p>Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.</p>
-              </div>
+              <p>Esta seção apresenta as funcionalidades da solução.</p>
 
               <section>
                 <h5>Funcionalidade 1 - Exibir detalhes do Arduino</h5>
@@ -510,7 +496,7 @@
                 </p>
               </section>
               <section>
-                <h5>Funcionalidade 2 - Cadastro de Projetos</h5>
+                <h5>Funcionalidade 2 - Cadastro de projetos</h5>
                 <p>Permite ao usuário cadastrar projetos no site.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
@@ -534,7 +520,7 @@
                         <ul>
                           <li>Basta clicar no icone de exclusão</li>
                           <li>Em seguida, irá aparecer um alert</li>
-                          <li>O usuário deverá clicar em "OK"</li>
+                          <li>O usuário deverá clicar em "OK" para confirmar a exclusão do projeto</li>
                       </ul>
                     </ul>
                   </li>
@@ -544,7 +530,7 @@
                 </p>
               </section>
               <section>
-                <h5>Funcionalidade 3 - Pesquisa de Projetos</h5>
+                <h5>Funcionalidade 3 - Pesquisa de projetos</h5>
                 <p>Permite ao usuário pesquisar projetos cadastrados por nome e nível de dificuldade.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
@@ -561,21 +547,38 @@
                 </p>
               </section>
               <section>
-                <h5>Funcionalidade 4 - Cadastro de posts (forum)</h5>
-                <p>Permite ao usuario Cadastrar posts no forum</p>
+                <h5>Funcionalidade 4 - Cadastro de posts (fórum)</h5>
+                <p>Permite ao usuário cadastrar posts no fórum.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
                   <li><strong>Instruções de acesso: </strong>
                     <ul>
                       <li>Abra o site</li>
                       <li>Faça o login</li>
-                      <li>Acesse a aba "forum"</li>
-                      <li>Em seguida, clique no botão "novo post"</li>
-                      <ul>
-                        <li>Preencha os campos</li>
-                        <li>Clique no botão "Adicionar"</li>
-                      </ul>
-                      <li>Depois voce ira voltar para a tela de exibição de posts</li>
+                      <li>Acesse a aba "Fórum"</li>
+                      <li>Caso o usuário deseje adicionar um novo post:
+                        <ul>
+                          <li>Deve clicar em "Novo Post"</li>
+                          <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Adicionar" para cadastrar o novo post</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje editar um post já cadastrado:
+                        <ul>
+                          <li>Deve clicar no botão "Editar" do post desejado</li>
+                          <li>Em seguida, um modal para editar os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Editar" para editar o post</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje excluir um post já cadastrado:
+                        <ul>
+                          <li>Basta clicar no icone de exclusão</li>
+                          <li>Em seguida, irá aparecer um alert</li>
+                          <li>O usuário deverá clicar em "OK" para confirmar a exclusão do post</li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -585,7 +588,7 @@
               </section>
               <section>
                 <h5>Funcionalidade 5 - Cadastro de comentários e curtidas nos posts</h5>
-                <p>Permite ao usuario cadastrar comentario e curtidas nos posts</p>
+                <p>Permite o usuario cadastrar comentário e curtidas nos posts.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
                   <li><strong>Instruções de acesso: </strong>
@@ -593,9 +596,9 @@
                       <li>Abra o site</li>
                       <li>Faça o login</li>
                       <li>Clique no nome do post</li>
-                      <li>Digite no campo o comentario que deseja publicar</li>
-                      <li>Depois clique no botao "comentar"</li>
-                      <li>Caso queira apagar clique no icone da lixeira</li>
+                      <li>Digite no campo o comentário que deseja publicar</li>
+                      <li>Em seguida, clique no botão "Comentar"</li>
+                      <li>Caso queira apagar basta clicar no ícone da lixeira</li>
                     </ul>
                   </li>
                 </ul>
@@ -605,7 +608,7 @@
               </section>
               <section>
                 <h5>Funcionalidade 6 - Ordenação de posts</h5>
-                <p>Permite ao usuário ordenar a visualização dos posts por <strong>mais recente</strong> ou <strong>mais curtido</strong>.</p>
+                <p>Permite o usuário ordenar a visualização dos posts por <strong>mais recente</strong> ou <strong>mais curtido</strong>.</p>
                 <ul class="list-unstyled">
                   <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
                   <li><strong>Instruções de acesso: </strong>
@@ -636,7 +639,7 @@
                       <li>Abra o site e faça login na sua conta</li>
                       <li>Acesse a aba "Componentes"</li>
                       <li>Será exibida a lista de componentes cadastrada pelo usuário conectado</li>
-                      <li>Caso o usuário deseje adicionar um novo projeto:
+                      <li>Caso o usuário deseje adicionar um novo componente:
                         <ul>
                           <li>Deve clicar em "Novo Componente"</li>
                           <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
@@ -688,13 +691,7 @@
             <!-- Estruturas de dados =============== -->
             <section id="ti_estruturas_dados">
               <h4>Estruturas de Dados</h4>
-              <p>Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.
-                <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse" href="#collapseEstruturas">Info</button>
-              </p>
-              <div class="alert alert-warning collapse" role="alert" id="collapseEstruturas">
-                <p>Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração</p>
-                <p>Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.</p>
-              </div>
+              <p>Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.</p>
 
               <section id="ti_ed_arduino">
                 <h5>Estrutura de Dados - Arduino</h5>
@@ -784,33 +781,21 @@
             <!-- Módulos e APIs ================= -->
             <section id="ti_modulos_apis">
               <h4>Módulos e APIs</h4>
-              <p>Esta seção apresenta os módulos e APIs utilizados na solução.
-                <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse" href="#collapseModulos">Info</button>
-              </p>
-              <div class="alert alert-warning collapse" role="alert" id="collapseModulos">
-                <p>Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.</p>
-              </div>
-
-              <section>
-                <h5>Images:</h5>
-                <ul>
-                  <li>Unsplash - <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a><span class="exemplo">EXEMPLO</span></li>
-                </ul>
-              </section>
+              <p>Esta seção apresenta os módulos e APIs utilizados na solução.</p>
 
               <section>
                 <h5>Fonts:</h5>
                 <ul>
-                  <li>Icons Font Face - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a><span class="exemplo">EXEMPLO</span></li>
+                  <li>Font Awesome - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
                 </ul>
               </section>
 
               <section>
-                <h5>Scripts:</h5>
+                <h5>JSON Server:</h5>
                 <ul>
-                  <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a><span class="exemplo">EXEMPLO</span></li>
-                  <li>Bootstrap 4 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a><span class="exemplo">EXEMPLO</span></li>
+                  <li>Replit - <a target="_blank" href="https://arduinohub--andreeluis.repl.co/">https://arduinohub--andreeluis.repl.co/</a></li>
                 </ul>
+
               </section>
             </section>
 
@@ -875,13 +860,14 @@
           <!-- Referências Bibliográficas ================= -->
           <section id="ti_referencias">
             <h2>Referências Bibliográficas</h2>
-            <p class="lead">Esta seção apresenta as referências bibliográficas utilizadas no projeto.
-              <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse" href="#collapseReferencias">Info</button>
-            </p>
-            <div class="alert alert-warning collapse" role="alert" id="collapseReferencias">
-              <p>Apresente as referências bibliográficas utilizadas no projeto. Inclua itens como: (1) livros, artigos, tutoriais, etc. utilizados no desenvolvimento da solução; (2) links para sites, blogs, etc. utilizados no desenvolvimento da solução.</p>
-            </div>
-            <p>...... COLOQUE AQUI O SEU TEXTO ......</p>
+            <p class="lead">Esta seção apresenta as referências bibliográficas utilizadas no projeto.</p>
+
+            <ul>
+              <li><a href="https://www.arduino.cc">Arduino - Site Oficial</a></li>
+              <li><a href="https://embarcados.com.br/arduino-uno/">Arduino UNO - Conheça o hardware da placa Arduino em detalhes</a></li>
+              <li><a href="https://fabiocosta.net/arduino/como-comecar-com-arduino/">Como começar com Arduino: os componentes mais importantes que você precisa conhecer</a></li>
+              <li><a href="https://3eunicamp.com/arduino-entenda-mais-sobre-essa-versatil-plataforma/">Arduino: entenda mais sobre essa versátil plataforma - 3E Unicamp</a></li>
+            </ul>
           </section>
 
         </div>
