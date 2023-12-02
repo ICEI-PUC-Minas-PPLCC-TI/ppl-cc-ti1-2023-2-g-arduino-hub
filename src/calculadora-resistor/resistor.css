@@ -110,15 +110,14 @@
 }
 
 form select {
-  width: 150px;
-  height: 40px;
+  font-size: 1em;
   border: 2px solid var(--black);
   border-radius: 1vmax;
   text-align: center;
 }
 
 form {
-  margin: 20px 0;
+  margin: 20px auto;
   max-width: 80%;
   display: flex;
   flex-direction: row;
@@ -130,7 +129,6 @@ form {
 .inputColor {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   margin-bottom: 20px;
 }
