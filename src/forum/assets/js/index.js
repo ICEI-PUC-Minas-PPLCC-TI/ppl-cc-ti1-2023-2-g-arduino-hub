@@ -3,8 +3,8 @@ let postsList;
 const form = document.querySelector('#modal form');
 
 window.addEventListener('load', showPosts, false);
+window.onbeforeunload = () => showPosts();
 document.querySelector('#add-post').addEventListener('click', addPost, false);
-
 
 // READ
 async function loadPosts() {
@@ -32,7 +32,7 @@ function generateHTML(post) {
 
       <div class="reactions">
         <span><i class="far fa-comment-alt"></i> ${comentarios.length}</span>
-        <span><i class="far fa-thumbs-up"></i> ${curtidas}</span>
+        <span><i class="${post.usuariosCurtidas.includes(user.id) ? 'fas' : 'far'} fa-thumbs-up"></i> ${curtidas}</span>
       </div>
 
       <p class="categoria">${categoria}</p>
