@@ -17,7 +17,7 @@ async function loadUser() {
 
 async function loadContent() {
   if (!user) {
-    window.location.href = '/login';
+    window.location.href = 'login.html';
     return;
   }
 
