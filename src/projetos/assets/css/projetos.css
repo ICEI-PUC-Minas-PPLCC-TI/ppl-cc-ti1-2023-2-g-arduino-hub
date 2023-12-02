@@ -50,3 +50,17 @@
 .itens-list article p.hard {
   background-color: var(--light-red);
 }
+
+
+p.categoria {
+  display: inline-block;
+	padding: .3em .6em;
+	background-color: var(--grey);
+	color: var(--white);
+	font-weight: bold;
+	border-radius: .5vmax;
+}
+
+.conteudo {
+  margin: 2em 1em 0;
+}

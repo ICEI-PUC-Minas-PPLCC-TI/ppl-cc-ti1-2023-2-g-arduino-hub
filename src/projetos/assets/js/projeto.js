@@ -17,7 +17,7 @@ async function showProject() {
 		document.querySelector('.autor').innerHTML = project.autor;
 
 
-		document.querySelector('.conteudo').innerHTML = `<p>${project.conteudo}</p>`;
+		document.querySelector('.conteudo').innerHTML = `<p>${project.conteudo.replaceAll('\n', '<br>')}</p>`;
   } catch (error) {
     console.error('Falha ao carregar e exibir os posts:', error);
   }

@@ -42,7 +42,7 @@ async function showPost() {
 		document.querySelector('.autor').innerHTML = post.autor;
 
 
-		document.querySelector('.conteudo').innerHTML = `<p>${post.conteudo}</p>`;
+		document.querySelector('.conteudo').innerHTML = `<p>${post.conteudo.replaceAll('\n', '<br>')}</p>`;
 
 		document.querySelector('.comentarios').innerHTML = `${comentariosHTML}`;
 
