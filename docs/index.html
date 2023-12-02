@@ -492,19 +492,196 @@
               </div>
 
               <section>
-                <h5>Funcionalidade 1 - Cadastro de Contatos<span class="exemplo">EXEMPLO</span></h5>
-                <p>Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema</p>
+                <h5>Funcionalidade 1 - Exibir detalhes do Arduino</h5>
+                <p>Permite ao usuário interagir com o Arduino, clicando nos componentes do Arduino e visualizando o detalhamento do componente.</p>
                 <ul class="list-unstyled">
-                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_contatos">Contatos</a></li>
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_arduino">Arduino</a></li>
                   <li><strong>Instruções de acesso: </strong>
                     <ul>
-                      <li>Abra o site e efetue o login</li>
-                      <li>Acesse o menu principal e escolha a opção Cadastros </li>
-                      <li>Em seguida, escolha a opção Contatos</li>
+                      <li>Abra o site (não necessita de login)</li>
+                      <li>Clique no componente que deseja visualizar os detalhes</li>
+                      <li>Em seguida, um modal com os detalhes irá abrir</li>
                     </ul>
                   </li>
                 </ul>
-                <p class="text-center"><img class="img-fluid" src="assets/images/exemplo-funcionalidade.png" alt="Tela Cadastro de Contatos"></p>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-home.png" alt="Tela Cadastro de Contatos">
+                  <img class="img-fluid" src="assets/images/funcionalidade-home-detalhe.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 2 - Cadastro de Projetos</h5>
+                <p>Permite ao usuário cadastrar projetos no site.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site e acesse a aba "Projetos"</li>
+                      <li>A lista de projetos já cadastrados irá ser exibida</li>
+                      <li>Caso o usuário deseje adicionar um novo projeto:</li>
+                        <ul>
+                          <li>Deve-se fazer o login e clicar em "Novo Projeto"</li>
+                          <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Adicionar" para cadastrar o projeto</li>
+                        </ul>
+                      <li>Caso o usuário já tenha criado um projeto e deseje editá-lo:</li>
+                        <ul>
+                          <li>Basta clicar no icone de edição</li>
+                          <li>Em seguida, um modal para editar os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Editar" para editar o projeto</li>
+                      </ul>
+                      <li>Caso o usuário já tenha criado um projeto e deseje excluí-lo:</li>
+                        <ul>
+                          <li>Basta clicar no icone de exclusão</li>
+                          <li>Em seguida, irá aparecer um alert</li>
+                          <li>O usuário deverá clicar em "OK"</li>
+                      </ul>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-cadastro_de_projetos.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 3 - Pesquisa de Projetos</h5>
+                <p>Permite ao usuário pesquisar projetos cadastrados por nome e nível de dificuldade.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_projetos">Projetos</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site (não necessita de login)</li>
+                      <li>Acesse a aba "Projetos"</li>
+                      <li>Em seguida, escreva o nome do projeto e/ou selecione o nível de dificuldade desejado</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-pesquisa_de_projetos.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 4 - Cadastro de posts (forum)</h5>
+                <p>Permite ao usuario Cadastrar posts no forum</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site</li>
+                      <li>Faça o login</li>
+                      <li>Acesse a aba "forum"</li>
+                      <li>Em seguida, clique no botão "novo post"</li>
+                      <ul>
+                        <li>Preencha os campos</li>
+                        <li>Clique no botão "Adicionar"</li>
+                      </ul>
+                      <li>Depois voce ira voltar para a tela de exibição de posts</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-cadastro_de_post.PNG" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 5 - Cadastro de comentários e curtidas nos posts</h5>
+                <p>Permite ao usuario cadastrar comentario e curtidas nos posts</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site</li>
+                      <li>Faça o login</li>
+                      <li>Clique no nome do post</li>
+                      <li>Digite no campo o comentario que deseja publicar</li>
+                      <li>Depois clique no botao "comentar"</li>
+                      <li>Caso queira apagar clique no icone da lixeira</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-cadastro-de-comentario-e-curtida.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 6 - Ordenação de posts</h5>
+                <p>Permite ao usuário ordenar a visualização dos posts por <strong>mais recente</strong> ou <strong>mais curtido</strong>.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_posts">Posts</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site e acesse a aba "Fórum"</li>
+                      <li>A lista de posts já cadastrados irá ser exibida</li>
+                      <li>Será exibido na parte superior da página um menu dropdown</li>
+                      <li>O usuário poderá selecionar:
+                        <ul>
+                          <li>Mais recentes</li>
+                          <li>Mais curtidos</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-ordenar-posts.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 7 - Estoque de componentes</h5>
+                <p>Permite o usuário gerenciar o seus componentes eletrônicos usados em projetos com Arduino.</strong></p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_usuarios">Usuários</a></li>
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o site e faça login na sua conta</li>
+                      <li>Acesse a aba "Componentes"</li>
+                      <li>Será exibida a lista de componentes cadastrada pelo usuário conectado</li>
+                      <li>Caso o usuário deseje adicionar um novo projeto:
+                        <ul>
+                          <li>Deve clicar em "Novo Componente"</li>
+                          <li>Em seguida, um modal para inserir os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Adicionar" para cadastrar o novo componente</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje editar um componente já cadastrado:
+                        <ul>
+                          <li>Deve clicar no botão "Editar" do componente desejado</li>
+                          <li>Em seguida, um modal para editar os detalhes irá abrir</li>
+                          <li>O usuário deverá preencher e clicar em "Editar" para editar o componente</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Caso o usuário deseje excluir um componente já cadastrado:
+                        <ul>
+                          <li>Deve clicar no botão "Excluir" do componente desejado</li>
+                          <li>Em seguida, um modal para confirmar a exclusão irá abrir</li>
+                          <li>O usuário deverá clicar em "Excluir" para confirmar a exclusão do componente</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-estoque.png" alt="Tela Cadastro de Contatos">
+                </p>
+              </section>
+              <section>
+                <h5>Funcionalidade 8 - Calculadora de Resistor</h5>
+                <p>Permite o usuário encontrar a especificação do resistor, baseado no código de cores.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Instruções de acesso: </strong>
+                    <ul>
+                      <li>Abra o e acesse a aba "Ferramentas"</li>
+                      <li>Será exibida a calculadora de resistor</li>
+                      <li>O usuário deve informar as 4 cores do resistor</li>
+                      <li>O sistema devolve a resistência calculada</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/funcionalidade-resistor.png" alt="Tela Cadastro de Contatos">
+                </p>
               </section>
             </section>
 
@@ -519,35 +696,88 @@
                 <p>Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.</p>
               </div>
 
-              <section>
-                <h5>Estrutura de Dados - Contatos<span class="exemplo">EXEMPLO</span></h5>
-                <p>Contatos da aplicação</p>
-                <pre>
-                  {
-                    "id": 1,
-                    "nome": "Leanne Graham",
-                    "cidade": "Belo Horizonte",
-                    "categoria": "amigos",
-                    "email": "Sincere@april.biz",
-                    "telefone": "1-770-736-8031",
-                    "website": "hildegard.org"
+              <section id="ti_ed_arduino">
+                <h5>Estrutura de Dados - Arduino</h5>
+                <p>Partes do Arduino</p>
+                <pre wrap="wrap">
+                {
+                  "id": 1,
+                  "name": "Pinos digitais de entrada e saída",
+                  "descricao": "Pinos que podem ser programados para agirem como entradas ou saídas fazendo com que o Arduino interaja com o meio externo.",
+                  "coords": {
+                    "x": 317,
+                    "y": 48,
+                    "radius": 25,
+                    "smx": 173,
+                    "smy": 26,
+                    "smradius": 18
                   }
+                }
+                </pre>
+                <p>Esse JSON gera dois <strong>imagemap</strong>, um para desktop e outro para mobile. Dessa forma, precisamos usar coordenadas para desktop e coordenadas para mobile (sm).</p>
+              </section>
+
+              <section id="ti_ed_projetos">
+                <h5>Estrutura de Dados - Projetos</h5>
+                <p>Projetos adicionados site.</p>
+                <pre wrap="wrap">
+                {
+                  "id": "00873583",
+                  "titulo": "Semáforo com Arduino",
+                  "categoria": "Primeiro projeto",
+                  "dificuldade": "easy",
+                  "conteudo": "Este é o projeto semáforo com Arduino...",
+                  "autor": "André Luís",
+                  "usuario": "ca5bd6fa-f820-4109-8d28-5acacf899580"
+                }
                 </pre>
               </section>
 
-              <section>
-                <h5>Estrutura de Dados - Usuários<span class="exemplo">EXEMPLO</span></h5>
-                <p>Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
-                <pre>
-                  {
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    email: "admin@abc.com"
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    login: "admin"
-                    nome: "Administrador do Sistema"
-                    senha: "123"
-                  }
+              <section id="ti_ed_posts">
+                <h5>Estrutura de Dados - Posts</h5>
+                <p>Postagens realizadas no fórum</p>
+                <pre wrap="wrap">
+                {
+                  "id": "99e45125",
+                  "titulo": "Meu segundo post",
+                  "dataPostagem": 1701480764326,
+                  "autor": "André Luís",
+                  "usuario": "ca5bd6fa-f820-4109-8d28-5acacf899580",
+                  "categoria": "Conhecendo o site",
+                  "conteudo": "Olá,\n estou conhecendo o site!",
+                  "curtidas": 1,
+                  "usuariosCurtidas": [
+                      "03915cdc-2854-4168-ae21-0cceafd379be"
+                  ],
+                  "comentarios": []
+                }
                 </pre>
+              </section>
+              <section id="ti_ed_usuarios">
+                <h5>Estrutura de Dados - Usuários</h5>
+                <p>Usuários da aplicação</p>
+                <pre wrap="wrap">
+                {
+                  "id": "ca5bd6fa-f820-4109-8d28-5acacf899580",
+                  "name": "André Luís",
+                  "username": "andrels",
+                  "email": "andrels@andrels.net",
+                  "password": "andrels123",
+                  "components": [
+                    {
+                      "id": "913034d5",
+                      "name": "Arduino Mega",
+                      "qtd": 12
+                    },
+                    {
+                      "id": "a331d17d",
+                      "name": "Protoboard",
+                      "qtd": 2
+                    }
+                  ]
+                }
+                </pre>
+                <p>Esse JSON armazena tanto os usuários, tanto os componentes que cada usuário possui (da sessão de cadastro de componentes).</p>
               </section>
             </section>
 
