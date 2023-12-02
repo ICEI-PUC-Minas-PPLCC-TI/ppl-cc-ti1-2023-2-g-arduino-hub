@@ -46,7 +46,9 @@ async function ShowProjects() {
   try {
     await LoadProjects();
 
-    const textoHTML = projectsList.map(generateHTML).join('');
+    const filteredProjectsList = filter();
+
+    const textoHTML = filteredProjectsList.map(generateHTML).join('');
 
     document.querySelector("#projects").innerHTML = textoHTML;
 
@@ -184,18 +186,18 @@ async function deleteProject() {
 
 
 // SEARCH
-document.querySelector('.search-bar').addEventListener('input', search, false);
+document.querySelector('.search-bar').addEventListener('input', ShowProjects, false);
 
 
 function normalizeString(str) {
   return str.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
 }
 
-function search() {
+function filter() {
   const query = normalizeString(document.querySelector('.search-bar #search').value);
   const difficulty = document.querySelector('#difficulty').value;
 
-  const filteredProjects = projectsList.filter(project => {
+  return projectsList.filter(project => {
     const { dificuldade, titulo, categoria, conteudo, autor } = project;
     return normalizeString(dificuldade).includes(difficulty) && (
       normalizeString(titulo).includes(query) ||
@@ -204,8 +206,4 @@ function search() {
       normalizeString(autor).includes(query)
     )
   });
-
-  const textoHTML = filteredProjects.map(generateHTML).join('');
-
-  document.querySelector("#projects").innerHTML = textoHTML;
 }
