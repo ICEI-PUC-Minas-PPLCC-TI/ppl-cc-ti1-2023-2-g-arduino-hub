@@ -72,7 +72,8 @@ function register(event) {
     name: name,
     username: username,
     email: email,
-    password: password
+    password: password,
+    components: []
   }
 
   try {
