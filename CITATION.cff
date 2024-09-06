@@ -2,12 +2,12 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Arduino HUB
 authors:
-  - family-names: Luís 
-    given-names: André 
+  - family-names: Luís
+    given-names: André
   - family-names: Lima
     given-names: Arnobio
-  - family-names: Vaz 
-    given-names: João Paulo 
+  - family-names: Vaz
+    given-names: João Paulo
   - family-names: Fornazier
     given-names: Rodrigo
   - name-suffix: Professor
@@ -17,7 +17,7 @@ authors:
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Mauro
-    given-names: Lúcio 
+    given-names: Lúcio
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Curto
