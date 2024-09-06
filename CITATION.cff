@@ -23,9 +23,9 @@ authors:
     family-names: Curto
     given-names: Hayala
 keywords:
-  - 
-  - 
-repository-code: 
+  - arduino
+  - hub
+repository-code: https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20232-arduino-hub/
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2023-12-14
